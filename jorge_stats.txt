@@ -1,0 +1,155 @@
+Processing Jorge color statistics...
+
+// Copy this into app.js
+const CARLOS_COLOR_STATS = {
+  "January": {
+    "white": {
+      "wins": 0,
+      "losses": 2,
+      "draws": 0
+    },
+    "black": {
+      "wins": 1,
+      "losses": 1,
+      "draws": 0
+    }
+  },
+  "February": {
+    "white": {
+      "wins": 1,
+      "losses": 6,
+      "draws": 0
+    },
+    "black": {
+      "wins": 3,
+      "losses": 4,
+      "draws": 0
+    }
+  },
+  "March": {
+    "white": {
+      "wins": 2,
+      "losses": 1,
+      "draws": 0
+    },
+    "black": {
+      "wins": 0,
+      "losses": 2,
+      "draws": 1
+    }
+  },
+  "April": {
+    "white": {
+      "wins": 0,
+      "losses": 5,
+      "draws": 0
+    },
+    "black": {
+      "wins": 1,
+      "losses": 3,
+      "draws": 1
+    }
+  },
+  "May": {
+    "white": {
+      "wins": 7,
+      "losses": 6,
+      "draws": 2
+    },
+    "black": {
+      "wins": 9,
+      "losses": 5,
+      "draws": 0
+    }
+  },
+  "June": {
+    "white": {
+      "wins": 6,
+      "losses": 3,
+      "draws": 0
+    },
+    "black": {
+      "wins": 5,
+      "losses": 4,
+      "draws": 0
+    }
+  },
+  "July": {
+    "white": {
+      "wins": 4,
+      "losses": 1,
+      "draws": 0
+    },
+    "black": {
+      "wins": 4,
+      "losses": 2,
+      "draws": 0
+    }
+  },
+  "August": {
+    "white": {
+      "wins": 1,
+      "losses": 4,
+      "draws": 0
+    },
+    "black": {
+      "wins": 2,
+      "losses": 5,
+      "draws": 1
+    }
+  },
+  "September": {
+    "white": {
+      "wins": 7,
+      "losses": 12,
+      "draws": 1
+    },
+    "black": {
+      "wins": 7,
+      "losses": 9,
+      "draws": 1
+    }
+  },
+  "October": {
+    "white": {
+      "wins": 3,
+      "losses": 3,
+      "draws": 0
+    },
+    "black": {
+      "wins": 5,
+      "losses": 2,
+      "draws": 0
+    }
+  },
+  "November": {
+    "white": {
+      "wins": 4,
+      "losses": 8,
+      "draws": 1
+    },
+    "black": {
+      "wins": 2,
+      "losses": 10,
+      "draws": 0
+    }
+  },
+  "December": {
+    "white": {
+      "wins": 8,
+      "losses": 9,
+      "draws": 0
+    },
+    "black": {
+      "wins": 9,
+      "losses": 9,
+      "draws": 0
+    }
+  }
+};
+
+// === SUMMARY ===
+// As White: 107 games
+//   Wins: 43 | Losses: 60 | Draws: 4
+// As Black: 108 games
+//   Wins: 48 | Losses: 56 | Draws: 4

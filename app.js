@@ -148,45 +148,48 @@ const Components = {
                 <!-- Stats Grid -->
                 <div class="overview-stats-grid">
                     <!-- Sessions Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(124, 58, 237, 0.04); border: 1px solid rgba(124, 58, 237, 0.15); padding: 0.5rem; gap: 0.25rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.7rem, 2vw, 0.85rem); font-weight: 600; color: rgba(124, 58, 237, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Sessions</div>
-                        <div class="stat-number" style="font-size: clamp(6rem, 18vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Carlos}; line-height: 0.85; max-width: 100%;" data-count="${STATS.sessions.total}">0</div>
-                        <div style="font-size: clamp(1.2rem, 3.5vw, 1.8rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center;">Sessions</div>
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(124, 58, 237, 0.04); border: 1px solid rgba(124, 58, 237, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(124, 58, 237, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Sessions</div>
+                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Carlos}; line-height: 0.85; max-width: 100%;" data-count="${STATS.sessions.total}">0</div>
+                        <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Sessions</div>
                     </div>
 
                     <!-- Games per Session Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0, 212, 255, 0.04); border: 1px solid rgba(0, 212, 255, 0.15); padding: 0.5rem; gap: 0.25rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.7rem, 2vw, 0.85rem); font-weight: 600; color: rgba(0, 212, 255, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Games Per</div>
-                        <div class="stat-number" style="font-size: clamp(6rem, 18vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Carey}; line-height: 0.85; max-width: 100%;" data-count="${avgSessionGames}">0</div>
-                        <div style="font-size: clamp(1.2rem, 3.5vw, 1.8rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center;">Games/Session</div>
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0, 212, 255, 0.04); border: 1px solid rgba(0, 212, 255, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(0, 212, 255, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Games Per</div>
+                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Carey}; line-height: 0.85; max-width: 100%;" data-count="${avgSessionGames}">0</div>
+                        <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Games/Session</div>
                     </div>
 
                     <!-- Avg Session Duration Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.5rem; gap: 0.25rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.7rem, 2vw, 0.85rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Avg Duration</div>
-                        <div class="stat-number" style="font-size: clamp(6rem, 18vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${avgSessionMinutes}">0</div>
-                        <div style="font-size: clamp(1.2rem, 3.5vw, 1.8rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center;">Mins/Session</div>
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Avg Duration</div>
+                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${avgSessionMinutes}">0</div>
+                        <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Mins/Session</div>
                     </div>
 
                     <!-- Brutal Games Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(220, 38, 38, 0.05); border: 1px solid rgba(220, 38, 38, 0.2); padding: 0.5rem; gap: 0.25rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.7rem, 2vw, 0.85rem); font-weight: 600; color: rgba(239, 68, 68, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Brutality</div>
-                        <div class="stat-number" style="font-size: clamp(6rem, 18vw, 10rem); font-weight: 800; color: #ef4444; line-height: 0.85; max-width: 100%;" data-count="${STATS.brutality.totalBrutalGames}">0</div>
-                        <div style="font-size: clamp(1.2rem, 3.5vw, 1.8rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center;">Savage Games</div>
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(220, 38, 38, 0.05); border: 1px solid rgba(220, 38, 38, 0.2); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(239, 68, 68, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Brutality</div>
+                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: #ef4444; line-height: 0.85; max-width: 100%;" data-count="${STATS.brutality.totalBrutalGames}">0</div>
+                        <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Savage Games</div>
                     </div>
 
                     <!-- Timed Games Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.5rem; gap: 0.25rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.7rem, 2vw, 0.85rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">5:00 Mins</div>
-                        <div class="stat-number" style="font-size: clamp(6rem, 18vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${timedGames}">0</div>
-                        <div style="font-size: clamp(1.2rem, 3.5vw, 1.8rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center;">Timed Games</div>
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">5:00 Mins</div>
+                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${timedGames}">0</div>
+                        <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Timed Games</div>
                     </div>
 
                     <!-- Longest Streak Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(251, 191, 36, 0.05); border: 1px solid rgba(251, 191, 36, 0.2); padding: 0.5rem; gap: 0.25rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.7rem, 2vw, 0.85rem); font-weight: 600; color: rgba(251, 191, 36, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Consecutive Wins</div>
-                        <div class="stat-number" style="font-size: clamp(6rem, 18vw, 10rem); font-weight: 800; color: #fbbf24; line-height: 0.85; max-width: 100%;" data-count="${Math.max(...Object.values(STATS.streaks))}">0</div>
-                        <div style="font-size: clamp(1.2rem, 3.5vw, 1.8rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center;">Best Streak</div>
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(251, 191, 36, 0.05); border: 1px solid rgba(251, 191, 36, 0.2); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                        <div style="font-size: clamp(0.55rem, 1.8vw, 0.75rem); font-weight: 600; color: rgba(251, 191, 36, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">
+                            <span class="desktop-label">Consecutive Wins</span>
+                            <span class="mobile-label" style="display: none;">Consec Wins</span>
+                        </div>
+                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: #fbbf24; line-height: 0.85; max-width: 100%;" data-count="${Math.max(...Object.values(STATS.streaks))}">0</div>
+                        <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Best Streak</div>
                     </div>
                 </div>
             </div>
@@ -296,23 +299,23 @@ const Components = {
             const color = CONFIG.playerColors[player];
 
             return `
-                <div style="margin-bottom: 1.5rem;">
-                    <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: 0.5rem;">
-                        <div style="flex-shrink: 0; width: 80px;">
+                <div class="timed-player-bar">
+                    <div class="bar-header">
+                        <div class="bar-name">
                             <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${color}; margin: 0;">${player}</h3>
                         </div>
-                        <div style="flex: 1; display: flex; align-items: center; gap: 0; height: 32px; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-md); overflow: hidden;">
+                        <div class="bar-chart">
                             <div style="background: linear-gradient(90deg, ${color}cc, ${color}); height: 100%; flex: ${stats.wins}; border-radius: 0;"></div>
                             <div style="background: rgba(255, 255, 255, 0.1); height: 100%; flex: ${stats.losses}; border-radius: 0;"></div>
                         </div>
-                        <div style="flex-shrink: 0; width: 100px; text-align: right;">
-                            <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${color}; font-size: 1rem;">${stats.wins}W-${stats.losses}L</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--color-text-secondary); font-size: 0.85rem;">${stats.winRate.toFixed(1)}%</div>
-                        </div>
                     </div>
-                    <div style="display: flex; gap: var(--spacing-md); margin-left: 95px; font-size: 0.85rem; color: var(--color-text-secondary);">
-                        <span>⏱️ Time wins: ${stats.timeWins}</span>
-                        <span>⏱️ Time losses: ${stats.timeLosses}</span>
+                    <div class="bar-stats-row">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${color}; font-size: 1rem;">${stats.wins}W-${stats.losses}L</div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--color-text-secondary); font-size: 0.85rem;">${stats.winRate.toFixed(1)}%</div>
+                        <span class="desktop-label" style="color: var(--color-text-secondary); font-size: 0.85rem;">⏱️ Time wins: ${stats.timeWins}</span>
+                        <span class="mobile-label" style="color: var(--color-text-secondary); font-size: 0.85rem;">⏱️W: ${stats.timeWins}</span>
+                        <span class="desktop-label" style="color: var(--color-text-secondary); font-size: 0.85rem;">⏱️ Time losses: ${stats.timeLosses}</span>
+                        <span class="mobile-label" style="color: var(--color-text-secondary); font-size: 0.85rem;">⏱️L: ${stats.timeLosses}</span>
                     </div>
                 </div>
             `;
@@ -323,7 +326,7 @@ const Components = {
                 <h2 class="section-title">Timed Games (5:00 Minute)</h2>
 
                 <!-- Summary Stats -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-lg);" class="timed-games-stats">
                     <div class="card" style="text-align: center;">
                         <div style="font-family: 'JetBrains Mono', monospace; font-size: 2.5rem; font-weight: 800; color: var(--color-text-primary); margin-bottom: 0.5rem;">18</div>
                         <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary);">Total Timed Games</div>
@@ -366,24 +369,24 @@ const Components = {
                     <div style="margin-bottom: var(--spacing-sm); font-size: 0.9rem; color: var(--color-text-secondary);">
                         4 sessions with timed games • Average 4.5 games per session
                     </div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md);">
+                    <div style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-md);" class="session-highlights-grid">
                         <div style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid ${CONFIG.playerColors.Jorge}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;">February 21, 2025</div>
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">February 21, 2025</span><span class="mobile-month" style="display: none;">Feb 21, 2025</span></div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">🏆 7 timed games</div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge 4W-3L</strong><br/>Carlos 3W-4L<br/>⏱️ 2 timeout wins</div>
                         </div>
                         <div style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid ${CONFIG.playerColors.Jorge}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;">July 13, 2025</div>
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">July 13, 2025</span><span class="mobile-month" style="display: none;">Jul 13, 2025</span></div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">5 timed games</div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge 3W-2L</strong><br/>Carlos 2W-3L<br/>⏱️ 1 timeout win</div>
                         </div>
                         <div style="background: rgba(124, 58, 237, 0.08); border-left: 4px solid ${CONFIG.playerColors.Carlos}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;">April 6, 2025</div>
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">April 6, 2025</span><span class="mobile-month" style="display: none;">Apr 6, 2025</span></div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">5 timed games</div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos 3W-2L</strong><br/>Jorge 2W-3L</div>
                         </div>
                         <div style="background: rgba(124, 58, 237, 0.08); border-left: 4px solid ${CONFIG.playerColors.Carlos}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;">July 23, 2025</div>
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">July 23, 2025</span><span class="mobile-month" style="display: none;">Jul 23, 2025</span></div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">1 timed game</div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos</strong> vs Carey<br/>Carlos win</div>
                         </div>
@@ -496,6 +499,7 @@ const Components = {
 
         const statsRows = players.map(([player, stats]) => {
             const color = CONFIG.playerColors[player];
+            const playerInitial = player.charAt(0);
             const maxStat = Math.max(...Object.values(STATS.brutality.byPlayer).flatMap(p => [p.inflicted, p.suffered]));
             const inflictedPercent = (stats.inflicted / maxStat) * 100;
             const sufferedPercent = (stats.suffered / maxStat) * 100;
@@ -510,44 +514,44 @@ const Components = {
             const invertedColor = invertColor(color);
 
             return `
-                <div style="margin: 0;">
+                <div class="brutality-bars" style="margin: 0;">
                     <!-- Suffered Row (Odd) -->
                     <div style="display: flex; align-items: center; gap: 0;">
-                        <div style="flex-shrink: 0; width: 80px; text-align: right; margin-right: var(--spacing-md);">
-                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${color}; margin: 0;">${player}</h3>
+                        <div class="brutality-name-col" style="flex-shrink: 0; width: 80px; text-align: right; margin-right: var(--spacing-md);">
+                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${color}; margin: 0;"><span class="desktop-label">${player}</span><span class="mobile-label">${playerInitial}</span></h3>
                         </div>
                         <!-- Suffered bar (extends left) - invisible on odd rows -->
-                        <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 0; margin-right: 0;">
-                            <div style="background: transparent; height: 28px; border-radius: var(--radius-sm) 0 0 var(--radius-sm); overflow: hidden; flex-basis: ${sufferedPercent}%; margin-right: 0;">
+                        <div class="brutality-bar-container" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 0; margin-right: 0;">
+                            <div style="background: transparent; height: 28px; border-radius: var(--radius-sm) 0 0 var(--radius-sm); overflow: hidden; width: ${sufferedPercent}%; margin-right: 0;">
                                 <div style="background: transparent; height: 100%; width: 100%;"></div>
                             </div>
                         </div>
                         <!-- Center Divider -->
-                        <div style="width: 2px; height: 28px; background: rgba(255,255,255,0.2); flex-shrink: 0; margin: 0;"></div>
+                        <div class="brutality-divider" style="width: 2px; height: 28px; background: rgba(255,255,255,0.2); flex-shrink: 0; margin: 0;"></div>
                         <!-- Inflicted bar (extends right) - normal color on odd rows -->
-                        <div style="flex: 1; display: flex; align-items: center; gap: 0; margin-left: 0;">
-                            <div style="background: rgba(255,0,0,0.08); height: 28px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; overflow: hidden; flex-basis: ${inflictedPercent}%; margin-left: 0;">
-                                <div style="background: linear-gradient(90deg, ${color}cc, ${color}); height: 100%; width: 100%;"></div>
+                        <div class="brutality-bar-container" style="flex: 1; display: flex; align-items: center; justify-content: flex-start; gap: 0; margin-left: 0; position: relative;">
+                            <div style="background: rgba(255,0,0,0.08); height: 28px; border-radius: 0 0.5rem 0.5rem 0; overflow: visible; width: ${inflictedPercent}%; margin-left: 0; position: relative;">
+                                <div style="background: linear-gradient(90deg, ${color}cc, ${color}); height: 100%; width: 100%; border-radius: 0 0.5rem 0.5rem 0;"></div>
+                                <span style="position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-family: 'JetBrains Mono', monospace; font-weight: 700; color: black; font-size: 0.9rem;">${stats.inflicted}</span>
                             </div>
-                            <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${color}; font-size: 0.9rem; margin-left: 0.5rem; min-width: 40px; text-align: left;">${stats.inflicted}</span>
                         </div>
                     </div>
                     
                     <!-- Inflicted Row (Even) -->
                     <div style="display: flex; align-items: center; gap: 0; margin: 0;">
-                        <div style="flex-shrink: 0; width: 80px; margin-right: var(--spacing-md);"></div>
+                        <div class="brutality-name-col" style="flex-shrink: 0; width: 80px; margin-right: var(--spacing-md);"></div>
                         <!-- Suffered bar (extends left) - normal color on even rows -->
-                        <div style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 0; margin-right: 0;">
-                            <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${invertedColor}; font-size: 0.9rem; margin-right: 0.5rem; min-width: 40px; text-align: right;">-${stats.suffered}</span>
-                            <div style="background: rgba(255,0,0,0.08); height: 28px; border-radius: var(--radius-sm) 0 0 var(--radius-sm); overflow: hidden; flex-basis: ${sufferedPercent}%; margin-right: 0;">
-                                <div style="background: linear-gradient(90deg, ${invertedColor}cc, ${invertedColor}); height: 100%; width: 100%;"></div>
+                        <div class="brutality-bar-container" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 0; margin-right: 0; position: relative;">
+                            <div style="background: rgba(255,0,0,0.08); height: 28px; border-radius: 0.5rem 0 0 0.5rem; overflow: visible; width: ${sufferedPercent}%; margin-right: 0; position: relative;">
+                                <div style="background: linear-gradient(90deg, ${invertedColor}cc, ${invertedColor}); height: 100%; width: 100%; border-radius: 0.5rem 0 0 0.5rem;"></div>
+                                <span style="position: absolute; left: 4px; top: 50%; transform: translateY(-50%); font-family: 'JetBrains Mono', monospace; font-weight: 700; color: black; font-size: 0.9rem;">-${stats.suffered}</span>
                             </div>
                         </div>
                         <!-- Center Divider -->
-                        <div style="width: 2px; height: 28px; background: rgba(255,255,255,0.2); flex-shrink: 0; margin: 0;"></div>
+                        <div class="brutality-divider" style="width: 2px; height: 28px; background: rgba(255,255,255,0.2); flex-shrink: 0; margin: 0;"></div>
                         <!-- Inflicted bar (extends right) - invisible on even rows -->
-                        <div style="flex: 1; display: flex; align-items: center; gap: 0; margin-left: 0;">
-                            <div style="background: transparent; height: 28px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; overflow: hidden; flex-basis: ${inflictedPercent}%; margin-left: 0;">
+                        <div class="brutality-bar-container" style="flex: 1; display: flex; align-items: center; justify-content: flex-start; gap: 0; margin-left: 0;">
+                            <div style="background: transparent; height: 28px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; overflow: hidden; width: ${inflictedPercent}%; margin-left: 0;">
                                 <div style="background: transparent; height: 100%; width: 100%;"></div>
                             </div>
                         </div>
@@ -613,13 +617,19 @@ const Components = {
                 const [month, day] = dateStr.split('/');
                 const months = ['January', 'February', 'March', 'April', 'May', 'June',
                                'July', 'August', 'September', 'October', 'November', 'December'];
+                const monthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
                 const dayNum = parseInt(day);
                 const suffix = dayNum === 1 || dayNum === 21 || dayNum === 31 ? 'st' :
                               dayNum === 2 || dayNum === 22 ? 'nd' :
                               dayNum === 3 || dayNum === 23 ? 'rd' : 'th';
-                return `${months[parseInt(month) - 1]} ${dayNum}${suffix}`;
+                return {
+                    full: `${months[parseInt(month) - 1]} ${dayNum}${suffix}`,
+                    short: `${monthsShort[parseInt(month) - 1]} ${dayNum}`
+                };
             };
 
+            const sessionDate = formatSessionDate(session.date);
             const wins = session.wins || {};
 
             // Find the player with most wins
@@ -644,25 +654,26 @@ const Components = {
                 .sort((a, b) => b[1] - a[1])
                 .map(([player, count]) => {
                     const color = CONFIG.playerColors[player];
-                    return `<span style="color: ${color}; font-weight: 600;">${player}: ${count}W</span>`;
+                    const initial = player.charAt(0);
+                    return `<span style="color: ${color}; font-weight: 600;"><span class="desktop-label">${player}: ${count}W</span><span class="mobile-label">${initial}: ${count}W</span></span>`;
                 })
-                .join('  ');
+                .join(' ');
 
             return `
                 <div class="session-card" 
                      style="color: ${topPlayerColor};"
                      onmouseenter="this.style.backgroundColor='${topPlayerColorHover}'; this.style.transform='translateX(4px)';"
                      onmouseleave="this.style.backgroundColor='transparent'; this.style.transform='translateX(0)';">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                        <div>
+                    <div class="session-card-content" style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: nowrap;">
+                        <div class="session-card-left" style="flex: 0 0 auto; min-width: 0;">
                             <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: var(--spacing-xs);">
-                                ${formatSessionDate(session.date)}
+                                <span class="desktop-label">${sessionDate.full}</span><span class="mobile-label">${sessionDate.short}</span>
                             </div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;">
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; word-break: break-word;">
                                 ${winsDisplay}
                             </div>
                         </div>
-                        <div style="text-align: right;">
+                        <div class="session-card-right" style="text-align: right; flex: 0 0 auto; white-space: nowrap;">
                             <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 700; color: var(--color-text-primary);">
                                 ${session.games} <span style="font-size: 0.9rem; color: var(--color-text-secondary);">games</span>
                             </div>
@@ -678,7 +689,7 @@ const Components = {
         return `
             <div class="stats-grid--full section animate-in" data-animate-delay="6">
                 <h2 class="section-title">Epic Sessions (10+ Games)</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--spacing-md);">
+                <div style="display: grid; gap: var(--spacing-md);" class="epic-sessions-grid">
                     ${sessions}
                 </div>
             </div>
@@ -741,7 +752,7 @@ const Components = {
         return `
             <div class="stats-grid--full section animate-in" data-animate-delay="7">
                 <h2 class="section-title">Player Highlights</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-md);" class="player-highlights-grid">
                     ${cards}
                 </div>
             </div>
@@ -781,7 +792,7 @@ const Components = {
             <div class="stats-grid--full section animate-in" data-animate-delay="8">
                 <h2 class="section-title">Timeline</h2>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-lg);" class="quarterly-stats">
                     ${quarterlyCards}
                 </div>
 

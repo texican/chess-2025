@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess 2025 - Championship Statistics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --chess-black: #0a0e27;
+            --chess-white: #f8f9fa;
+            --accent-primary: #9ca3af;
+            --accent-secondary: #7c3aed;
+            --accent-tertiary: #ec4899;
+            --accent-success: #10b981;
+            --wood-brown: #8b7355;
+            --shadow: rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--chess-black) 0%, #1a1f3a 100%);
+            color: var(--chess-white);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated chess board background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 120px, rgba(0, 212, 255, 0.03) 120px, rgba(0, 212, 255, 0.03) 240px),
+                repeating-linear-gradient(90deg, transparent, transparent 120px, rgba(0, 212, 255, 0.03) 120px, rgba(0, 212, 255, 0.03) 240px);
+            animation: boardRotate 120s linear infinite;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        @keyframes boardRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            color: var(--accent-primary);
+            text-shadow: 3px 3px 0 var(--chess-black), 6px 6px 20px rgba(0, 212, 255, 0.5);
+            letter-spacing: -2px;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '♔';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            animation: crownFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes crownFloat {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--accent-primary);
+            opacity: 0.8;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-top: 3rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.05) 0%, rgba(248, 249, 250, 0.02) 100%);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.8s ease-out backwards;
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0.1s; }
+        .stat-card:nth-child(2) { animation-delay: 0.2s; }
+        .stat-card:nth-child(3) { animation-delay: 0.3s; }
+        .stat-card:nth-child(4) { animation-delay: 0.4s; }
+        .stat-card:nth-child(5) { animation-delay: 0.5s; }
+        .stat-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at top right, rgba(0, 212, 255, 0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+        }
+
+        .player-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .player-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .player-row:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-left-color: var(--accent-primary);
+            transform: translateX(5px);
+        }
+
+        .player-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--chess-white);
+        }
+
+        .player-record {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            color: var(--accent-primary);
+        }
+
+        .win-bar-container {
+            width: 100%;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+            position: relative;
+        }
+
+        .win-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .win-bar:hover {
+            filter: brightness(1.15);
+            transform: scaleY(1.05);
+        }
+
+        .win-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .percentage {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--chess-white);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .big-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            text-align: center;
+            margin: 2rem 0;
+            text-shadow: 3px 3px 0 var(--chess-black);
+        }
+
+        .label {
+            font-family: 'JetBrains Mono', monospace;
+            text-align: center;
+            font-size: 1rem;
+            color: rgba(245, 241, 232, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .h2h-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .h2h-matchup {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1rem;
+            border-left: 3px solid var(--accent-primary);
+            transition: all 0.3s ease;
+        }
+
+        .h2h-matchup:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .matchup-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--chess-white);
+            margin-bottom: 1rem;
+        }
+
+        .matchup-score {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            color: var(--accent-primary);
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .chart-container {
+            margin-top: 2rem;
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 350px;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .bar-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bar {
+            width: 100%;
+            background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 -5px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .bar:hover {
+            background: linear-gradient(180deg, #00f0ff, var(--accent-primary));
+            box-shadow: 0 -5px 30px rgba(0, 212, 255, 0.6);
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--accent-primary);
+            font-size: 1.2rem;
+        }
+
+        .bar-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--chess-white);
+        }
+
+        .donut-chart {
+            width: 250px;
+            height: 250px;
+            margin: 2rem auto;
+            position: relative;
+        }
+
+        .donut-segment {
+            transition: all 0.3s ease;
+        }
+
+        .donut-segment:hover {
+            opacity: 0.8;
+            filter: brightness(1.2);
+        }
+
+        .legend {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .notable-games {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 4rem;
+            border: 2px solid rgba(0, 212, 255, 0.4);
+        }
+
+        .game-note {
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .game-note:hover {
+            background: rgba(0, 212, 255, 0.15);
+            transform: translateX(5px);
+        }
+
+        .game-players {
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 6rem;
+            padding: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: rgba(245, 241, 232, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Tooltip for pie charts */
+        .chart-tooltip {
+            position: fixed;
+            background: rgba(10, 14, 39, 0.95);
+            border: 2px solid var(--accent-primary);
+            border-radius: 8px;
+            padding: 1rem;
+            pointer-events: none;
+            z-index: 1000;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--chess-white);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            display: none;
+        }
+
+        .chart-tooltip strong {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .bar-chart {
+                height: 200px;
+            }
+            
+            .game-stats-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Piece decorations */
+        .piece-decor {
+            position: fixed;
+            font-size: 8rem;
+            opacity: 0.05;
+            animation: floatPiece 20s ease-in-out infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .piece-decor:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .piece-decor:nth-child(2) { top: 60%; right: 5%; animation-delay: 5s; }
+        .piece-decor:nth-child(3) { bottom: 20%; left: 10%; animation-delay: 10s; }
+
+        @keyframes floatPiece {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(5deg); }
+            75% { transform: translateY(-10px) rotate(-5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="piece-decor">♜</div>
+    <div class="piece-decor">♞</div>
+    <div class="piece-decor">♝</div>
+
+    <div class="container">
+        <header>
+            <h1>CHESS 2025</h1>
+            <div class="subtitle">Championship Statistics</div>
+            <div style="display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div style="width: 16px; height: 16px; border-radius: 50%; background: #7c3aed; box-shadow: 0 0 12px #7c3aed80;"></div>
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #7c3aed; font-size: 1.1rem;">Carlos</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div style="width: 16px; height: 16px; border-radius: 50%; background: #00d4ff; box-shadow: 0 0 12px #00d4ff80;"></div>
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #00d4ff; font-size: 1.1rem;">Carey</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <div style="width: 16px; height: 16px; border-radius: 50%; background: #10b981; box-shadow: 0 0 12px #10b98180;"></div>
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #10b981; font-size: 1.1rem;">Jorge</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <!-- Total Games -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Tournament Overview
+                </div>
+                
+                <!-- Featured Total Games -->
+                <div style="text-align: center; margin-bottom: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1)); border-radius: 15px; border: 2px solid rgba(0, 212, 255, 0.3);">
+                    <div class="big-number" id="totalGames" style="font-size: 7rem; margin: 0;">0</div>
+                    <div class="label" style="font-size: 1.3rem; letter-spacing: 4px; margin-top: 1rem;">TOTAL GAMES PLAYED</div>
+                </div>
+                
+                <!-- Other Stats -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem;">
+                    <div style="text-align: center;">
+                        <div class="big-number" id="totalSessions" style="font-size: 3rem; margin: 0.5rem 0;">0</div>
+                        <div class="label" style="font-size: 0.9rem;">Sessions</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="big-number" id="avgGamesPerSession" style="font-size: 3rem; margin: 0.5rem 0;">0</div>
+                        <div class="label" style="font-size: 0.9rem;">Games/Session</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="big-number" id="avgDuration" style="font-size: 3rem; margin: 0.5rem 0;">0</div>
+                        <div class="label" style="font-size: 0.9rem;">Avg Duration (hrs)</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="big-number" id="brutalGamesCount" style="font-size: 3rem; margin: 0.5rem 0;">0</div>
+                        <div class="label" style="font-size: 0.9rem;">Brutal Games 💀</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overall Standings -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Championship Standings
+                </div>
+                <div class="player-stats" id="standings"></div>
+            </div>
+
+            <!-- Color Advantage & Victory Methods -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Game Statistics
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;" class="game-stats-grid">
+                    <div>
+                        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-primary); margin-bottom: 1rem; text-align: center;">Color Advantage</h3>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <svg id="colorPieChart" width="320" height="320" style="margin: 1rem 0;"></svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-primary); margin-bottom: 1rem; text-align: center;">Victory Methods</h3>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <svg id="methodsPieChart" width="320" height="320" style="margin: 1rem 0;"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Head to Head -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Head-to-Head Records
+                </div>
+                <div class="h2h-grid" id="h2hRecords"></div>
+            </div>
+
+            <!-- Brutality Stats -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Brutality Statistics
+                </div>
+                
+                <div style="background: rgba(0, 212, 255, 0.1); border-left: 3px solid var(--accent-primary); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--accent-primary); margin-bottom: 0.5rem;">What is Brutality?</div>
+                    <div style="font-family: 'Inter', sans-serif; line-height: 1.6; color: rgba(248, 249, 250, 0.8);">
+                        <strong>Brutality Inflicted</strong> = Total brutality points from games where the player won (how savage their victories were)<br/>
+                        <strong>Brutality Suffered</strong> = Total brutality points from games where the player lost (how crushing their defeats were)
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-primary); margin-bottom: 1rem;">Most Brutal (Inflicted) 💀</h3>
+                        <div style="font-size: 0.9rem; color: rgba(248, 249, 250, 0.6); margin-bottom: 1rem; font-family: 'Inter', sans-serif;">How savage when winning</div>
+                        <div id="brutalInflicted"></div>
+                    </div>
+                    <div>
+                        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-tertiary); margin-bottom: 1rem;">Most Brutalized (Suffered) 😭</h3>
+                        <div style="font-size: 0.9rem; color: rgba(248, 249, 250, 0.6); margin-bottom: 1rem; font-family: 'Inter', sans-serif;">How crushing when losing</div>
+                        <div id="brutalReceived"></div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(236, 72, 153, 0.1); border-left: 3px solid var(--accent-tertiary); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--accent-tertiary); margin-bottom: 0.5rem;">The Brutality Paradox</div>
+                    <div style="font-family: 'Inter', sans-serif; line-height: 1.6; color: rgba(248, 249, 250, 0.8);">
+                        <strong>Carey's Story:</strong> Inflicted 45 points but suffered 60 - Carey's losses tend to be more brutal than victories<br/>
+                        <strong>Carlos's Dominance:</strong> Inflicted 44 points but only suffered 26 - More dignified defeats, savage wins<br/>
+                        <strong>Jorge's Balance:</strong> Inflicted 41, suffered 44 - Nearly balanced brutality in wins and losses
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--accent-primary); margin-bottom: 1rem;">Most Savage Moments</h3>
+                    <div id="brutalGames"></div>
+                </div>
+            </div>
+
+            <!-- Fun Facts -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Fun Facts & Insights
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <!-- Peak Gaming Time -->
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--accent-primary);">
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--accent-primary); margin-bottom: 1rem;">🕐 Peak Gaming Hour</div>
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; color: var(--chess-white); text-align: center; margin: 1rem 0;">9 PM</div>
+                        <div style="font-family: 'Inter', sans-serif; text-align: center; color: rgba(248, 249, 250, 0.7);">62 games played during this hour</div>
+                    </div>
+
+                    <!-- Time of Day Breakdown -->
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--accent-primary);">
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--accent-primary); margin-bottom: 1rem;">⏰ When Do You Play?</div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.95rem;">
+                            <div style="margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: rgba(248, 249, 250, 0.8);">Evening (6pm-12am)</span>
+                                    <span style="color: var(--chess-white); font-weight: 700;">192</span>
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="background: linear-gradient(90deg, #9ca3af, #6b7280); height: 100%; width: 64.9%; border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: rgba(248, 249, 250, 0.8);">Afternoon (12pm-6pm)</span>
+                                    <span style="color: var(--chess-white); font-weight: 700;">75</span>
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="background: linear-gradient(90deg, #9ca3af, #6b7280); height: 100%; width: 25.3%; border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: rgba(248, 249, 250, 0.8);">Night (12am-6am)</span>
+                                    <span style="color: var(--chess-white); font-weight: 700;">28</span>
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="background: linear-gradient(90deg, #9ca3af, #6b7280); height: 100%; width: 9.5%; border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: rgba(248, 249, 250, 0.8);">Morning (6am-12pm)</span>
+                                    <span style="color: var(--chess-white); font-weight: 700;">1</span>
+                                </div>
+                                <div style="background: rgba(255, 255, 255, 0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="background: linear-gradient(90deg, #9ca3af, #6b7280); height: 100%; width: 0.3%; border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Longest Win Streaks -->
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 12px; border-left: 3px solid var(--accent-primary);">
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--accent-primary); margin-bottom: 1rem;">🔥 Longest Win Streaks</div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.95rem; line-height: 2;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span style="color: #10b981; font-weight: 700;">Jorge</span>
+                                <span style="color: var(--chess-white); font-size: 1.5rem; font-weight: 700;">8 wins</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span style="color: #7c3aed; font-weight: 700;">Carlos</span>
+                                <span style="color: var(--chess-white); font-size: 1.5rem; font-weight: 700;">7 wins</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="color: #00d4ff; font-weight: 700;">Carey</span>
+                                <span style="color: var(--chess-white); font-size: 1.5rem; font-weight: 700;">6 wins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Epic Sessions -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Epic Sessions (10+ Games)
+                </div>
+                <div id="epicSessions"></div>
+            </div>
+
+            <!-- Time Breakdown -->
+            <div class="stat-card" style="grid-column: span 2;">
+                <div class="card-title">
+                    Time Breakdown
+                </div>
+                
+                <!-- Toggle between Monthly and Quarterly -->
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem; justify-content: center;">
+                    <button id="monthlyBtn" style="padding: 0.75rem 2rem; background: var(--accent-primary); color: var(--chess-black); border: none; border-radius: 8px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; cursor: pointer; font-size: 1rem;">Monthly</button>
+                    <button id="quarterlyBtn" style="padding: 0.75rem 2rem; background: rgba(255, 255, 255, 0.1); color: var(--chess-white); border: 2px solid var(--accent-primary); border-radius: 8px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; cursor: pointer; font-size: 1rem;">Quarterly</button>
+                </div>
+
+                <div id="timeBreakdownContent"></div>
+            </div>
+        </div>
+
+        <footer>
+            Generated from 2025 Chess Tournament Data • Three Warriors • One Board • Infinite Battles
+        </footer>
+    </div>
+
+    <script>
+        // Chess statistics data
+        const stats = {
+            "total_games": 296,
+            "total_excluding_draws": 287,
+            "draws": 9,
+            "players": ["Carlos", "Carey", "Jorge"],
+            "wins_by_player": {
+                "Carlos": {"total": 136, "as_white": 69, "as_black": 67},
+                "Carey": {"total": 60, "as_white": 29, "as_black": 31},
+                "Jorge": {"total": 91, "as_white": 43, "as_black": 48}
+            },
+            "games_by_player": {
+                "Carlos": 255,
+                "Carey": 122,
+                "Jorge": 215
+            },
+            "win_rates": {
+                "Carlos": 53.3,
+                "Carey": 49.2,
+                "Jorge": 42.3
+            },
+            "head_to_head": {
+                "Carlos vs Jorge": {
+                    "Carlos_wins": 92,
+                    "Jorge_wins": 75,
+                    "Carlos_win_pct": 52.9,
+                    "Jorge_win_pct": 43.1,
+                    "draws": 7,
+                    "total_games": 174
+                },
+                "Carey vs Carlos": {
+                    "Carey_wins": 36,
+                    "Carlos_wins": 44,
+                    "Carey_win_pct": 44.4,
+                    "Carlos_win_pct": 54.3,
+                    "draws": 1,
+                    "total_games": 81
+                },
+                "Carey vs Jorge": {
+                    "Carey_wins": 24,
+                    "Jorge_wins": 16,
+                    "Carey_win_pct": 58.5,
+                    "Jorge_win_pct": 39.0,
+                    "draws": 1,
+                    "total_games": 41
+                }
+            },
+            "loss_types": {
+                "Checkmate": 238,
+                "Resigned": 45,
+                "Stalemate": 8,
+                "Time": 3,
+                "Draw": 1,
+                "Resignation": 1
+            },
+            "color_advantage": {
+                "white_wins": 141,
+                "black_wins": 146,
+                "draws": 9
+            },
+            "session_stats": {
+                "total_sessions": 50,
+                "avg_games_per_session": 5.9,
+                "avg_duration_hours": 1.29,
+                "longest_session": {
+                    "games": 25,
+                    "date": "2025-09-27",
+                    "duration": 5.3
+                },
+                "two_player_sessions": 37,
+                "three_player_sessions": 13,
+                "epic_sessions": [
+                    {
+                        "date": "2025-09-27",
+                        "num_games": 25,
+                        "duration": 5.3,
+                        "players": ["Carey", "Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 11, "Carey": 4, "Jorge": 9}
+                    },
+                    {
+                        "date": "2025-12-30",
+                        "num_games": 22,
+                        "duration": 4.37,
+                        "players": ["Carey", "Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 12, "Carey": 1, "Jorge": 9}
+                    },
+                    {
+                        "date": "2025-12-24",
+                        "num_games": 19,
+                        "duration": 4.39,
+                        "players": ["Carey", "Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 8, "Carey": 3, "Jorge": 8}
+                    },
+                    {
+                        "date": "2025-05-22",
+                        "num_games": 13,
+                        "duration": 2.7,
+                        "players": ["Carey", "Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 5, "Carey": 0, "Jorge": 7}
+                    },
+                    {
+                        "date": "2025-04-06",
+                        "num_games": 12,
+                        "duration": 2.78,
+                        "players": ["Carey", "Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 9, "Carey": 1, "Jorge": 1}
+                    },
+                    {
+                        "date": "2025-11-05",
+                        "num_games": 12,
+                        "duration": 2.75,
+                        "players": ["Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 7, "Jorge": 4}
+                    },
+                    {
+                        "date": "2025-06-17",
+                        "num_games": 11,
+                        "duration": 2.37,
+                        "players": ["Carey", "Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 2, "Carey": 4, "Jorge": 5}
+                    },
+                    {
+                        "date": "2025-07-13",
+                        "num_games": 11,
+                        "duration": 1.56,
+                        "players": ["Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 3, "Jorge": 8}
+                    },
+                    {
+                        "date": "2025-09-06",
+                        "num_games": 11,
+                        "duration": 2.56,
+                        "players": ["Carey", "Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 4, "Carey": 3, "Jorge": 4}
+                    },
+                    {
+                        "date": "2025-06-13",
+                        "num_games": 10,
+                        "duration": 2.23,
+                        "players": ["Carlos", "Jorge"],
+                        "player_wins": {"Carlos": 4, "Jorge": 6}
+                    }
+                ]
+            },
+            "monthly_stats": {
+                "2025-01": {"total_games": 9, "player_games": {"Carlos": 9, "Carey": 5, "Jorge": 4}, "player_wins": {"Carlos": 5, "Carey": 1, "Jorge": 3}},
+                "2025-02": {"total_games": 20, "player_games": {"Carlos": 15, "Carey": 7, "Jorge": 13}, "player_wins": {"Carlos": 9, "Carey": 2, "Jorge": 9}},
+                "2025-03": {"total_games": 18, "player_games": {"Carlos": 11, "Carey": 10, "Jorge": 7}, "player_wins": {"Carlos": 6, "Carey": 7, "Jorge": 5}},
+                "2025-04": {"total_games": 12, "player_games": {"Carlos": 11, "Carey": 3, "Jorge": 10}, "player_wins": {"Carlos": 6, "Carey": 1, "Jorge": 5}},
+                "2025-05": {"total_games": 34, "player_games": {"Carlos": 27, "Carey": 14, "Jorge": 21}, "player_wins": {"Carlos": 14, "Carey": 7, "Jorge": 11}},
+                "2025-06": {"total_games": 26, "player_games": {"Carlos": 20, "Carey": 7, "Jorge": 19}, "player_wins": {"Carlos": 11, "Carey": 5, "Jorge": 10}},
+                "2025-07": {"total_games": 14, "player_games": {"Carlos": 14, "Carey": 2, "Jorge": 12}, "player_wins": {"Carlos": 7, "Carey": 0, "Jorge": 6}},
+                "2025-08": {"total_games": 22, "player_games": {"Carlos": 18, "Carey": 8, "Jorge": 14}, "player_wins": {"Carlos": 11, "Carey": 4, "Jorge": 7}},
+                "2025-09": {"total_games": 43, "player_games": {"Carlos": 36, "Carey": 12, "Jorge": 31}, "player_wins": {"Carlos": 19, "Carey": 5, "Jorge": 17}},
+                "2025-10": {"total_games": 19, "player_games": {"Carlos": 17, "Carey": 6, "Jorge": 13}, "player_wins": {"Carlos": 9, "Carey": 3, "Jorge": 6}},
+                "2025-11": {"total_games": 33, "player_games": {"Carlos": 30, "Carey": 13, "Jorge": 23}, "player_wins": {"Carlos": 15, "Carey": 8, "Jorge": 9}},
+                "2025-12": {"total_games": 46, "player_games": {"Carlos": 47, "Carey": 35, "Jorge": 48}, "player_wins": {"Carlos": 24, "Carey": 17, "Jorge": 3}}
+            },
+            "quarterly_stats": {
+                "2025Q1": {"total_games": 47, "player_games": {"Carlos": 35, "Carey": 22, "Jorge": 24}, "player_wins": {"Carlos": 20, "Carey": 10, "Jorge": 17}},
+                "2025Q2": {"total_games": 72, "player_games": {"Carlos": 58, "Carey": 24, "Jorge": 50}, "player_wins": {"Carlos": 31, "Carey": 13, "Jorge": 26}},
+                "2025Q3": {"total_games": 79, "player_games": {"Carlos": 68, "Carey": 22, "Jorge": 57}, "player_wins": {"Carlos": 37, "Carey": 9, "Jorge": 30}},
+                "2025Q4": {"total_games": 98, "player_games": {"Carlos": 94, "Carey": 54, "Jorge": 84}, "player_wins": {"Carlos": 48, "Carey": 28, "Jorge": 18}}
+            },
+            "other_games": {
+                "Carlos": {"wins": 3, "losses": 1, "total_games": 4},
+                "Carey": {"wins": 1, "losses": 0, "total_games": 1}
+            },
+            "notable_games": [
+                {"white": "Carlos", "black": "Carey", "winner": "White", "note": "Constipated Chess Board"},
+                {"white": "Carlos", "black": "Carey", "winner": "White", "note": "Assassination"},
+                {"white": "Carlos", "black": "Carey", "winner": "White", "note": "Scholar's Mate"},
+                {"white": "Carlos", "black": "Carey", "winner": "White", "note": "Hallway of Doom"},
+                {"white": "Carlos", "black": "Jorge", "winner": "Draw", "note": "Jorge Mulligan"},
+                {"white": "Jorge", "black": "Carey", "winner": "White", "note": "Grampa was gonna force the draw via the 50 move rule; Carey tipped his king in frustration with the peanut gallery (Carlos).Carey fladgulated himself to loss."},
+                {"white": "Carey", "black": "Carlos", "winner": "Black", "note": "surprise samurai shit"},
+                {"white": "Carlos", "black": "Jorge", "winner": "White", "note": "Taiga learns chess"},
+                {"white": "Jorge", "black": "Carey", "winner": "Black", "note": "Creative"},
+                {"white": "Carey", "black": "Jorge", "winner": "Black", "note": "Annoyance"}
+            ],
+            "brutality_stats": {
+                "total_brutal_games": 47,
+                "total_brutality_points": 135,
+                "max_brutality": 5,
+                "inflicted": {
+                    "Carey": 45,
+                    "Carlos": 44,
+                    "Jorge": 41
+                },
+                "received": {
+                    "Carey": 60,
+                    "Jorge": 44,
+                    "Carlos": 26
+                },
+                "most_brutal_games": [
+                    {"date": "2025-05-12", "winner": "Jorge", "loser": "Carey", "brutality": 5, "note": "Grampa was gonna force the draw via the 50 move rule; Carey tipped his king in frustration with the peanut gallery (Carlos).Carey fladgulated himself to loss."},
+                    {"date": "2025-03-23", "winner": "Carlos", "loser": "Carey", "brutality": 4, "note": "Scholar's Mate"},
+                    {"date": "2025-06-17", "winner": "Jorge", "loser": "Carey", "brutality": 4, "note": "Annoyance"},
+                    {"date": "2025-07-23", "winner": "Carlos", "loser": "Carey", "brutality": 4, "note": "three white queens. Seemingly infinite check loops. Maximum absurdity."},
+                    {"date": "2025-03-17", "winner": "Carey", "loser": "Jorge", "brutality": 4, "note": ""},
+                    {"date": "2025-01-11", "winner": "Carlos", "loser": "Carey", "brutality": 4, "note": ""},
+                    {"date": "2025-03-29", "winner": "Carey", "loser": "Carlos", "brutality": 4, "note": ""}
+                ]
+            },
+            "time_breakdown": {
+                "monthly": {
+                    "January": {"games": 9, "carlos_wins": 7, "carey_wins": 1, "jorge_wins": 1, "brutality": 4},
+                    "February": {"games": 20, "carlos_wins": 10, "carey_wins": 6, "jorge_wins": 4, "brutality": 3},
+                    "March": {"games": 18, "carlos_wins": 7, "carey_wins": 8, "jorge_wins": 2, "brutality": 27},
+                    "April": {"games": 12, "carlos_wins": 9, "carey_wins": 1, "jorge_wins": 1, "brutality": 0},
+                    "May": {"games": 34, "carlos_wins": 8, "carey_wins": 8, "jorge_wins": 16, "brutality": 17},
+                    "June": {"games": 26, "carlos_wins": 8, "carey_wins": 7, "jorge_wins": 11, "brutality": 20},
+                    "July": {"games": 14, "carlos_wins": 4, "carey_wins": 1, "jorge_wins": 8, "brutality": 4},
+                    "August": {"games": 22, "carlos_wins": 10, "carey_wins": 8, "jorge_wins": 3, "brutality": 5},
+                    "September": {"games": 43, "carlos_wins": 20, "carey_wins": 7, "jorge_wins": 14, "brutality": 19},
+                    "October": {"games": 19, "carlos_wins": 7, "carey_wins": 4, "jorge_wins": 8, "brutality": 12},
+                    "November": {"games": 33, "carlos_wins": 24, "carey_wins": 2, "jorge_wins": 6, "brutality": 20},
+                    "December": {"games": 46, "carlos_wins": 22, "carey_wins": 7, "jorge_wins": 17, "brutality": 4}
+                },
+                "quarterly": {
+                    "Q1": {"games": 47, "carlos_wins": 24, "carey_wins": 15, "jorge_wins": 7, "brutality": 34},
+                    "Q2": {"games": 72, "carlos_wins": 25, "carey_wins": 16, "jorge_wins": 28, "brutality": 37},
+                    "Q3": {"games": 79, "carlos_wins": 34, "carey_wins": 16, "jorge_wins": 25, "brutality": 28},
+                    "Q4": {"games": 98, "carlos_wins": 53, "carey_wins": 13, "jorge_wins": 31, "brutality": 36}
+                }
+            }
+        };
+
+        // Player color mapping - GLOBAL: Carlos = Purple, Carey = Cyan, Jorge = Green
+        const playerColors = {
+            'Carlos': '#7c3aed',
+            'Carey': '#00d4ff',
+            'Jorge': '#10b981'
+        };
+
+        // Animate counter with decimal support
+        function animateCounter(element, target, duration = 2000, decimals = 0) {
+            if (!element) return;
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = decimals > 0 ? target.toFixed(decimals) : target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = decimals > 0 ? start.toFixed(decimals) : Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // Populate standings
+        function populateStandings() {
+            const container = document.getElementById('standings');
+            const sorted = Object.entries(stats.wins_by_player)
+                .map(([name, data]) => ({
+                    name,
+                    wins: data.total,
+                    games: stats.games_by_player[name],
+                    winRate: stats.win_rates[name]
+                }))
+                .sort((a, b) => b.wins - a.wins);
+
+            const playerGradients = {
+                'Carlos': 'linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%)',
+                'Carey': 'linear-gradient(90deg, #00d4ff 0%, #06b6d4 100%)',
+                'Jorge': 'linear-gradient(90deg, #10b981 0%, #34d399 100%)'
+            };
+
+            sorted.forEach((player, index) => {
+                const row = document.createElement('div');
+                row.className = 'player-row';
+                row.innerHTML = `
+                    <div>
+                        <div class="player-name">${index === 0 ? '👑 ' : ''}${player.name}</div>
+                        <div class="player-record">${player.wins}W - ${player.games - player.wins}L</div>
+                    </div>
+                    <div class="win-bar-container">
+                        <div class="win-bar" style="width: 0%; background: ${playerGradients[player.name]}; box-shadow: 0 0 12px ${playerColors[player.name]}40, 0 4px 8px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);" data-width="${player.winRate}%">
+                            <span class="percentage">${player.winRate.toFixed(1)}%</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(row);
+                
+                // Animate bar width
+                setTimeout(() => {
+                    const bar = row.querySelector('.win-bar');
+                    bar.style.width = bar.dataset.width;
+                }, 100 * index);
+            });
+        }
+
+        // Color advantage pie chart with integrated labels - MODERN VERSION
+        function createColorChart() {
+            const svg = document.getElementById('colorPieChart');
+            const data = [
+                { label: 'White', value: stats.color_advantage.white_wins, color: '#f8f9fa', solidColor: '#f8f9fa' },
+                { label: 'Black', value: stats.color_advantage.black_wins, color: '#475569', solidColor: '#475569' },
+                { label: 'Draw', value: stats.color_advantage.draws, color: '#7c3aed', solidColor: '#7c3aed' }
+            ];
+            
+            const total = data.reduce((sum, d) => sum + d.value, 0);
+            const radius = 130;
+            const centerX = 160;
+            const centerY = 160;
+            
+            // Create defs for gradients
+            const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            data.forEach((item, idx) => {
+                const gradient = document.createElementNS('http://www.w3.org/2000/svg', 'radialGradient');
+                gradient.setAttribute('id', `colorGrad${idx}`);
+                const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+                stop1.setAttribute('offset', '0%');
+                stop1.setAttribute('stop-color', item.solidColor);
+                stop1.setAttribute('stop-opacity', '1');
+                const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+                stop2.setAttribute('offset', '100%');
+                stop2.setAttribute('stop-color', item.solidColor);
+                stop2.setAttribute('stop-opacity', '0.8');
+                gradient.appendChild(stop1);
+                gradient.appendChild(stop2);
+                defs.appendChild(gradient);
+            });
+            svg.appendChild(defs);
+            
+            let currentAngle = -90; // Start at top
+            
+            data.forEach((item, index) => {
+                const percentage = (item.value / total) * 100;
+                const sliceAngle = (item.value / total) * 360;
+                const endAngle = currentAngle + sliceAngle;
+                
+                // Calculate path for pie slice
+                const startRad = (currentAngle * Math.PI) / 180;
+                const endRad = (endAngle * Math.PI) / 180;
+                
+                const x1 = centerX + radius * Math.cos(startRad);
+                const y1 = centerY + radius * Math.sin(startRad);
+                const x2 = centerX + radius * Math.cos(endRad);
+                const y2 = centerY + radius * Math.sin(endRad);
+                
+                const largeArc = sliceAngle > 180 ? 1 : 0;
+                
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                const pathData = `M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+                path.setAttribute('d', pathData);
+                path.setAttribute('fill', `url(#colorGrad${index})`);
+                path.setAttribute('stroke', 'rgba(255, 255, 255, 0.1)');
+                path.setAttribute('stroke-width', '1');
+                path.style.cursor = 'pointer';
+                path.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                path.style.opacity = '0';
+                path.style.filter = `drop-shadow(0 0 8px ${item.solidColor}40)`;
+                
+                // Hover effects
+                path.onmouseenter = function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transformOrigin = `${centerX}px ${centerY}px`;
+                    this.style.filter = `drop-shadow(0 0 15px ${item.solidColor}80) brightness(1.15)`;
+                };
+                
+                path.onmouseleave = function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.filter = `drop-shadow(0 0 8px ${item.solidColor}40)`;
+                };
+                
+                svg.appendChild(path);
+                
+                // Add label text on the slice
+                const midAngle = (currentAngle + endAngle) / 2;
+                const midRad = (midAngle * Math.PI) / 180;
+                const labelRadius = radius * 0.65;
+                const labelX = centerX + labelRadius * Math.cos(midRad);
+                const labelY = centerY + labelRadius * Math.sin(midRad);
+                
+                // Create text element
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                text.setAttribute('x', labelX);
+                text.setAttribute('y', labelY);
+                text.setAttribute('text-anchor', 'middle');
+                text.setAttribute('dominant-baseline', 'middle');
+                text.setAttribute('fill', item.color === '#f8f9fa' ? '#0a0e27' : '#f8f9fa');
+                text.setAttribute('font-family', 'Space Grotesk, sans-serif');
+                text.setAttribute('font-weight', '700');
+                text.setAttribute('font-size', '14');
+                text.setAttribute('pointer-events', 'none');
+                text.style.opacity = '0';
+                text.textContent = item.label;
+                svg.appendChild(text);
+                
+                // Create percentage text
+                const percentText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                percentText.setAttribute('x', labelX);
+                percentText.setAttribute('y', labelY + 18);
+                percentText.setAttribute('text-anchor', 'middle');
+                percentText.setAttribute('dominant-baseline', 'middle');
+                percentText.setAttribute('fill', item.color === '#f8f9fa' ? '#0a0e27' : '#f8f9fa');
+                percentText.setAttribute('font-family', 'JetBrains Mono, monospace');
+                percentText.setAttribute('font-weight', '600');
+                percentText.setAttribute('font-size', '16');
+                percentText.setAttribute('pointer-events', 'none');
+                percentText.style.opacity = '0';
+                percentText.textContent = percentage.toFixed(1) + '%';
+                svg.appendChild(percentText);
+                
+                // Animate in
+                setTimeout(() => {
+                    path.style.opacity = '1';
+                    text.style.opacity = '1';
+                    percentText.style.opacity = '1';
+                }, index * 200);
+                
+                currentAngle = endAngle;
+            });
+        }
+
+        // Victory methods pie chart with integrated labels - MODERN VERSION
+        function createMethodsChart() {
+            const svg = document.getElementById('methodsPieChart');
+            const colors = {
+                'Checkmate': '#00d4ff',
+                'Resigned': '#ec4899',
+                'Stalemate': '#7c3aed',
+                'Time': '#10b981'
+            };
+            
+            const data = [];
+            let total = 0;
+            
+            Object.entries(stats.loss_types).forEach(([method, count]) => {
+                if (method !== 'Draw' && colors[method]) {
+                    data.push({ label: method, value: count, color: colors[method] });
+                    total += count;
+                }
+            });
+            
+            const radius = 130;
+            const centerX = 160;
+            const centerY = 160;
+            
+            // Create defs for gradients
+            const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            data.forEach((item, idx) => {
+                const gradient = document.createElementNS('http://www.w3.org/2000/svg', 'radialGradient');
+                gradient.setAttribute('id', `methodGrad${idx}`);
+                const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+                stop1.setAttribute('offset', '0%');
+                stop1.setAttribute('stop-color', item.color);
+                stop1.setAttribute('stop-opacity', '1');
+                const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+                stop2.setAttribute('offset', '100%');
+                stop2.setAttribute('stop-color', item.color);
+                stop2.setAttribute('stop-opacity', '0.8');
+                gradient.appendChild(stop1);
+                gradient.appendChild(stop2);
+                defs.appendChild(gradient);
+            });
+            svg.appendChild(defs);
+            
+            let currentAngle = -90; // Start at top
+            
+            data.forEach((item, index) => {
+                const percentage = (item.value / total) * 100;
+                const sliceAngle = (item.value / total) * 360;
+                const endAngle = currentAngle + sliceAngle;
+                
+                // Calculate path for pie slice
+                const startRad = (currentAngle * Math.PI) / 180;
+                const endRad = (endAngle * Math.PI) / 180;
+                
+                const x1 = centerX + radius * Math.cos(startRad);
+                const y1 = centerY + radius * Math.sin(startRad);
+                const x2 = centerX + radius * Math.cos(endRad);
+                const y2 = centerY + radius * Math.sin(endRad);
+                
+                const largeArc = sliceAngle > 180 ? 1 : 0;
+                
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                const pathData = `M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z`;
+                path.setAttribute('d', pathData);
+                path.setAttribute('fill', `url(#methodGrad${index})`);
+                path.setAttribute('stroke', 'rgba(255, 255, 255, 0.1)');
+                path.setAttribute('stroke-width', '1');
+                path.style.cursor = 'pointer';
+                path.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                path.style.opacity = '0';
+                path.style.filter = `drop-shadow(0 0 8px ${item.color}40)`;
+                
+                // Hover effects
+                path.onmouseenter = function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transformOrigin = `${centerX}px ${centerY}px`;
+                    this.style.filter = `drop-shadow(0 0 15px ${item.color}80) brightness(1.15)`;
+                };
+                
+                path.onmouseleave = function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.filter = `drop-shadow(0 0 8px ${item.color}40)`;
+                };
+                
+                svg.appendChild(path);
+                
+                // Add label text on the slice (only if slice is big enough)
+                if (percentage > 5) {
+                    const midAngle = (currentAngle + endAngle) / 2;
+                    const midRad = (midAngle * Math.PI) / 180;
+                    const labelRadius = radius * 0.65;
+                    const labelX = centerX + labelRadius * Math.cos(midRad);
+                    const labelY = centerY + labelRadius * Math.sin(midRad);
+                    
+                    // Create text element
+                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    text.setAttribute('x', labelX);
+                    text.setAttribute('y', labelY);
+                    text.setAttribute('text-anchor', 'middle');
+                    text.setAttribute('dominant-baseline', 'middle');
+                    text.setAttribute('fill', '#f8f9fa');
+                    text.setAttribute('font-family', 'Space Grotesk, sans-serif');
+                    text.setAttribute('font-weight', '700');
+                    text.setAttribute('font-size', '13');
+                    text.setAttribute('pointer-events', 'none');
+                    text.style.opacity = '0';
+                    text.textContent = item.label;
+                    svg.appendChild(text);
+                    
+                    // Create percentage text
+                    const percentText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    percentText.setAttribute('x', labelX);
+                    percentText.setAttribute('y', labelY + 18);
+                    percentText.setAttribute('text-anchor', 'middle');
+                    percentText.setAttribute('dominant-baseline', 'middle');
+                    percentText.setAttribute('fill', '#f8f9fa');
+                    percentText.setAttribute('font-family', 'JetBrains Mono, monospace');
+                    percentText.setAttribute('font-weight', '600');
+                    percentText.setAttribute('font-size', '15');
+                    percentText.setAttribute('pointer-events', 'none');
+                    percentText.style.opacity = '0';
+                    percentText.textContent = percentage.toFixed(1) + '%';
+                    svg.appendChild(percentText);
+                    
+                    // Animate text in
+                    setTimeout(() => {
+                        text.style.opacity = '1';
+                        percentText.style.opacity = '1';
+                    }, index * 200 + 100);
+                }
+                
+                // Animate in
+                setTimeout(() => {
+                    path.style.opacity = '1';
+                }, index * 200);
+                
+                currentAngle = endAngle;
+            });
+        }
+
+        // Head to head records
+        function populateH2H() {
+            const container = document.getElementById('h2hRecords');
+            
+            Object.entries(stats.head_to_head).forEach(([matchup, record], matchupIndex) => {
+                const [player1, player2] = matchup.split(' vs ');
+                const p1Wins = record[`${player1}_wins`];
+                const p2Wins = record[`${player2}_wins`];
+                const p1WinPct = record[`${player1}_win_pct`];
+                const p2WinPct = record[`${player2}_win_pct`];
+                const draws = record.draws;
+                const totalGames = record.total_games;
+                
+                // Determine winner and reorder so winner is on left
+                let leftPlayer, rightPlayer, leftWins, rightWins, leftWinPct, rightWinPct;
+                if (p1Wins >= p2Wins) {
+                    leftPlayer = player1;
+                    rightPlayer = player2;
+                    leftWins = p1Wins;
+                    rightWins = p2Wins;
+                    leftWinPct = p1WinPct;
+                    rightWinPct = p2WinPct;
+                } else {
+                    leftPlayer = player2;
+                    rightPlayer = player1;
+                    leftWins = p2Wins;
+                    rightWins = p1Wins;
+                    leftWinPct = p2WinPct;
+                    rightWinPct = p1WinPct;
+                }
+                
+                const div = document.createElement('div');
+                div.className = 'h2h-matchup';
+                
+                // Create unique ID for this matchup's SVG
+                const svgId = `h2h-chart-${matchupIndex}`;
+                
+                div.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                        <div style="position: relative; width: 140px; height: 140px;">
+                            <svg id="${svgId}" width="140" height="140"></svg>
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; pointer-events: none;">
+                                <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--chess-white);">${totalGames}</div>
+                                <div style="font-family: 'Inter', sans-serif; font-size: 0.7rem; color: rgba(248, 249, 250, 0.6); text-transform: uppercase; letter-spacing: 1px;">games</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; width: 100%;">
+                            <div style="display: flex; justify-content: space-around; align-items: center; margin-bottom: 0.5rem;">
+                                <div style="text-align: center;">
+                                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: ${playerColors[leftPlayer]}; margin-bottom: 0.25rem;">${leftPlayer}</div>
+                                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 600; color: ${playerColors[leftPlayer]};">${leftWinPct}%</div>
+                                </div>
+                                <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: rgba(248, 249, 250, 0.5);">vs</div>
+                                <div style="text-align: center;">
+                                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; font-weight: 700; color: ${playerColors[rightPlayer]}; margin-bottom: 0.25rem;">${rightPlayer}</div>
+                                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 600; color: ${playerColors[rightPlayer]};">${rightWinPct}%</div>
+                                </div>
+                            </div>
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700;">
+                                <span style="color: ${playerColors[leftPlayer]}">${leftWins}</span> - <span style="color: #64748b">${draws}</span> - <span style="color: ${playerColors[rightPlayer]}">${rightWins}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+                
+                // Create doughnut chart after element is in DOM - pass in left player first
+                setTimeout(() => {
+                    createH2HDoughnut(svgId, leftWins, rightWins, draws, playerColors[leftPlayer], playerColors[rightPlayer]);
+                }, 50);
+            });
+        }
+        
+        function createH2HDoughnut(svgId, p1Wins, p2Wins, draws, color1, color2) {
+            const svg = document.getElementById(svgId);
+            if (!svg) return;
+            
+            const total = p1Wins + p2Wins + draws;
+            if (total === 0) return;
+            
+            const radius = 58;
+            const innerRadius = 42;
+            const centerX = 70;
+            const centerY = 70;
+            
+            // Create gradient definitions
+            const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+            
+            // Gradient for player 1
+            const gradient1 = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+            gradient1.setAttribute('id', `grad1-${svgId}`);
+            gradient1.setAttribute('x1', '0%');
+            gradient1.setAttribute('y1', '0%');
+            gradient1.setAttribute('x2', '100%');
+            gradient1.setAttribute('y2', '100%');
+            const stop1a = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+            stop1a.setAttribute('offset', '0%');
+            stop1a.setAttribute('stop-color', color1);
+            stop1a.setAttribute('stop-opacity', '1');
+            const stop1b = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+            stop1b.setAttribute('offset', '100%');
+            stop1b.setAttribute('stop-color', color1);
+            stop1b.setAttribute('stop-opacity', '0.7');
+            gradient1.appendChild(stop1a);
+            gradient1.appendChild(stop1b);
+            
+            // Gradient for player 2
+            const gradient2 = document.createElementNS('http://www.w3.org/2000/svg', 'linearGradient');
+            gradient2.setAttribute('id', `grad2-${svgId}`);
+            gradient2.setAttribute('x1', '0%');
+            gradient2.setAttribute('y1', '0%');
+            gradient2.setAttribute('x2', '100%');
+            gradient2.setAttribute('y2', '100%');
+            const stop2a = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+            stop2a.setAttribute('offset', '0%');
+            stop2a.setAttribute('stop-color', color2);
+            stop2a.setAttribute('stop-opacity', '1');
+            const stop2b = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
+            stop2b.setAttribute('offset', '100%');
+            stop2b.setAttribute('stop-color', color2);
+            stop2b.setAttribute('stop-opacity', '0.7');
+            gradient2.appendChild(stop2a);
+            gradient2.appendChild(stop2b);
+            
+            defs.appendChild(gradient1);
+            defs.appendChild(gradient2);
+            svg.appendChild(defs);
+            
+            const data = [
+                { value: p1Wins, color: `url(#grad1-${svgId})`, solidColor: color1 },
+                { value: draws, color: '#475569', solidColor: '#475569' },
+                { value: p2Wins, color: `url(#grad2-${svgId})`, solidColor: color2 }
+            ].filter(d => d.value > 0);
+            
+            let currentAngle = -90;
+            
+            data.forEach((item, index) => {
+                const sliceAngle = (item.value / total) * 360;
+                const endAngle = currentAngle + sliceAngle;
+                
+                const startRad = (currentAngle * Math.PI) / 180;
+                const endRad = (endAngle * Math.PI) / 180;
+                
+                // Outer arc points
+                const x1 = centerX + radius * Math.cos(startRad);
+                const y1 = centerY + radius * Math.sin(startRad);
+                const x2 = centerX + radius * Math.cos(endRad);
+                const y2 = centerY + radius * Math.sin(endRad);
+                
+                // Inner arc points
+                const x3 = centerX + innerRadius * Math.cos(endRad);
+                const y3 = centerY + innerRadius * Math.sin(endRad);
+                const x4 = centerX + innerRadius * Math.cos(startRad);
+                const y4 = centerY + innerRadius * Math.sin(startRad);
+                
+                const largeArc = sliceAngle > 180 ? 1 : 0;
+                
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                const pathData = `
+                    M ${x1} ${y1}
+                    A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2}
+                    L ${x3} ${y3}
+                    A ${innerRadius} ${innerRadius} 0 ${largeArc} 0 ${x4} ${y4}
+                    Z
+                `;
+                path.setAttribute('d', pathData);
+                path.setAttribute('fill', item.color);
+                path.setAttribute('stroke', 'rgba(255, 255, 255, 0.1)');
+                path.setAttribute('stroke-width', '1');
+                path.style.opacity = '0';
+                path.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                
+                // Add subtle glow
+                path.style.filter = `drop-shadow(0 0 6px ${item.solidColor}40)`;
+                
+                // Add hover effect
+                path.onmouseenter = function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transformOrigin = `${centerX}px ${centerY}px`;
+                    this.style.filter = `drop-shadow(0 0 12px ${item.solidColor}80) brightness(1.15)`;
+                };
+                path.onmouseleave = function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.filter = `drop-shadow(0 0 6px ${item.solidColor}40)`;
+                };
+                
+                svg.appendChild(path);
+                
+                // Animate in with stagger
+                setTimeout(() => {
+                    path.style.opacity = '1';
+                }, 100 + (index * 100));
+                
+                currentAngle = endAngle;
+            });
+        }
+
+        // Notable games
+        function populateNotableGames() {
+            const container = document.getElementById('notableGames');
+            
+            stats.notable_games.forEach((game, index) => {
+                if (game.note && game.note.length > 3) {
+                    const div = document.createElement('div');
+                    div.className = 'game-note';
+                    div.style.animationDelay = `${index * 0.1}s`;
+                    div.innerHTML = `
+                        <div class="game-players">${game.white} (White) vs ${game.black} (Black)</div>
+                        <div>"${game.note}"</div>
+                    `;
+                    container.appendChild(div);
+                }
+            });
+        }
+
+        // Session statistics - Epic sessions only
+        function populateSessionStats() {
+            // Populate epic sessions
+            const container = document.getElementById('epicSessions');
+            
+            stats.session_stats.epic_sessions.forEach((session, index) => {
+                const sessionDiv = document.createElement('div');
+                sessionDiv.style.background = 'rgba(255, 255, 255, 0.03)';
+                sessionDiv.style.borderRadius = '12px';
+                sessionDiv.style.padding = '1.5rem';
+                sessionDiv.style.marginBottom = '1rem';
+                sessionDiv.style.borderLeft = '3px solid var(--accent-primary)';
+                sessionDiv.style.transition = 'all 0.3s ease';
+                sessionDiv.style.cursor = 'pointer';
+                sessionDiv.style.animation = 'fadeInUp 0.6s ease-out backwards';
+                sessionDiv.style.animationDelay = `${index * 0.1}s`;
+                
+                sessionDiv.addEventListener('mouseenter', function() {
+                    this.style.background = 'rgba(0, 212, 255, 0.1)';
+                    this.style.transform = 'translateX(5px)';
+                });
+                sessionDiv.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(255, 255, 255, 0.03)';
+                    this.style.transform = 'translateX(0)';
+                });
+                
+                // Format date as "Month Day"
+                const dateObj = new Date(session.date + 'T00:00:00');
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+                const month = monthNames[dateObj.getMonth()];
+                const day = dateObj.getDate();
+                
+                // Add ordinal suffix (st, nd, rd, th)
+                let suffix = 'th';
+                if (day === 1 || day === 21 || day === 31) suffix = 'st';
+                else if (day === 2 || day === 22) suffix = 'nd';
+                else if (day === 3 || day === 23) suffix = 'rd';
+                
+                const formattedDate = `${month} ${day}${suffix}`;
+                
+                // Sort players by wins (most to least)
+                const sortedPlayers = Object.entries(session.player_wins)
+                    .sort((a, b) => b[1] - a[1]);
+                
+                // Format player wins with colors
+                let winsText = '';
+                sortedPlayers.forEach(([player, wins]) => {
+                    winsText += `<span style="margin-right: 1rem; color: ${playerColors[player]}">${player}: ${wins}W</span>`;
+                });
+                
+                sessionDiv.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                        <div>
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--chess-white);">${formattedDate}</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; color: rgba(248, 249, 250, 0.7); margin-top: 0.25rem;">${session.players.join(', ')}</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">${session.num_games} games</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; color: rgba(248, 249, 250, 0.7);">${session.duration} hours</div>
+                        </div>
+                    </div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--accent-primary); margin-top: 1rem;">
+                        ${winsText}
+                    </div>
+                `;
+                
+                container.appendChild(sessionDiv);
+            });
+        }
+
+        // Brutality statistics
+        function populateBrutalityStats() {
+            // Populate inflicted brutality
+            const inflictedContainer = document.getElementById('brutalInflicted');
+            const sortedInflicted = Object.entries(stats.brutality_stats.inflicted)
+                .sort((a, b) => b[1] - a[1]);
+            
+            sortedInflicted.forEach(([player, points], index) => {
+                const div = document.createElement('div');
+                div.style.display = 'flex';
+                div.style.justifyContent = 'space-between';
+                div.style.alignItems = 'center';
+                div.style.padding = '0.75rem';
+                div.style.background = 'rgba(255, 255, 255, 0.03)';
+                div.style.borderRadius = '8px';
+                div.style.marginBottom = '0.5rem';
+                div.style.animation = 'fadeInUp 0.6s ease-out backwards';
+                div.style.animationDelay = `${index * 0.1}s`;
+                div.innerHTML = `
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: ${playerColors[player]}">${player}</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; color: ${playerColors[player]}; font-size: 1.3rem; font-weight: 700;">${points} 💀</span>
+                `;
+                inflictedContainer.appendChild(div);
+            });
+
+            // Populate received brutality
+            const receivedContainer = document.getElementById('brutalReceived');
+            const sortedReceived = Object.entries(stats.brutality_stats.received)
+                .sort((a, b) => b[1] - a[1]);
+            
+            sortedReceived.forEach(([player, points], index) => {
+                const div = document.createElement('div');
+                div.style.display = 'flex';
+                div.style.justifyContent = 'space-between';
+                div.style.alignItems = 'center';
+                div.style.padding = '0.75rem';
+                div.style.background = 'rgba(255, 255, 255, 0.03)';
+                div.style.borderRadius = '8px';
+                div.style.marginBottom = '0.5rem';
+                div.style.animation = 'fadeInUp 0.6s ease-out backwards';
+                div.style.animationDelay = `${index * 0.1}s`;
+                div.innerHTML = `
+                    <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: ${playerColors[player]}">${player}</span>
+                    <span style="font-family: 'JetBrains Mono', monospace; color: ${playerColors[player]}; font-size: 1.3rem; font-weight: 700;">${points} 😭</span>
+                `;
+                receivedContainer.appendChild(div);
+            });
+
+            // Populate most brutal games
+            const gamesContainer = document.getElementById('brutalGames');
+            
+            stats.brutality_stats.most_brutal_games.forEach((game, index) => {
+                // Format date
+                const dateObj = new Date(game.date + 'T00:00:00');
+                const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+                const month = monthNames[dateObj.getMonth()];
+                const day = dateObj.getDate();
+                let suffix = 'th';
+                if (day === 1 || day === 21 || day === 31) suffix = 'st';
+                else if (day === 2 || day === 22) suffix = 'nd';
+                else if (day === 3 || day === 23) suffix = 'rd';
+                const formattedDate = `${month} ${day}${suffix}`;
+                
+                // Get winner's color
+                const winnerColor = playerColors[game.winner];
+
+                const div = document.createElement('div');
+                div.style.background = 'rgba(0, 0, 0, 0.3)';
+                div.style.borderLeft = `4px solid ${winnerColor}`;
+                div.style.padding = '1.5rem';
+                div.style.marginBottom = '1rem';
+                div.style.borderRadius = '8px';
+                div.style.transition = 'all 0.3s ease';
+                div.style.animation = 'fadeInUp 0.6s ease-out backwards';
+                div.style.animationDelay = `${index * 0.1}s`;
+                
+                div.addEventListener('mouseenter', function() {
+                    this.style.background = `${winnerColor}26`;
+                    this.style.transform = 'translateX(5px)';
+                });
+                div.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(0, 0, 0, 0.3)';
+                    this.style.transform = 'translateX(0)';
+                });
+
+                const stars = '⭐'.repeat(game.brutality);
+                const noteText = game.note ? `<div style="font-style: italic; margin-top: 0.5rem; color: rgba(248, 249, 250, 0.7);">"${game.note}"</div>` : '';
+                
+                div.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: start;">
+                        <div>
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--chess-white);">${formattedDate}</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; color: ${winnerColor}; margin-top: 0.5rem;">
+                                ${game.winner} destroyed ${game.loser}
+                            </div>
+                            ${noteText}
+                        </div>
+                        <div style="font-size: 1.5rem;">${stars}</div>
+                    </div>
+                `;
+                gamesContainer.appendChild(div);
+            });
+        }
+
+        // Time Breakdown
+        let currentView = 'monthly';
+        
+        function populateTimeBreakdown(view) {
+            const container = document.getElementById('timeBreakdownContent');
+            container.innerHTML = '';
+            
+            const data = view === 'monthly' ? stats.time_breakdown.monthly : stats.time_breakdown.quarterly;
+            const periods = Object.keys(data);
+            
+            periods.forEach((period, index) => {
+                const periodData = data[period];
+                
+                const periodDiv = document.createElement('div');
+                periodDiv.style.background = 'rgba(255, 255, 255, 0.03)';
+                periodDiv.style.borderRadius = '12px';
+                periodDiv.style.padding = '1.5rem';
+                periodDiv.style.marginBottom = '1rem';
+                periodDiv.style.borderLeft = '3px solid var(--accent-primary)';
+                periodDiv.style.animation = 'fadeInUp 0.6s ease-out backwards';
+                periodDiv.style.animationDelay = `${index * 0.05}s`;
+                
+                // Calculate total wins
+                const totalWins = periodData.carlos_wins + periodData.carey_wins + periodData.jorge_wins;
+                
+                periodDiv.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--chess-white);">${period}</div>
+                        <div style="display: flex; gap: 2rem;">
+                            <div style="text-align: center;">
+                                <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">${periodData.games}</div>
+                                <div style="font-family: 'Inter', sans-serif; font-size: 0.8rem; color: rgba(248, 249, 250, 0.6);">Games</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 700; color: var(--accent-tertiary);">${periodData.brutality}</div>
+                                <div style="font-family: 'Inter', sans-serif; font-size: 0.8rem; color: rgba(248, 249, 250, 0.6);">Brutality</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <div style="background: rgba(124, 58, 237, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--chess-white); margin-bottom: 0.5rem;">Carlos</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-secondary);">${periodData.carlos_wins}W</div>
+                        </div>
+                        <div style="background: rgba(0, 212, 255, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--chess-white); margin-bottom: 0.5rem;">Carey</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-primary);">${periodData.carey_wins}W</div>
+                        </div>
+                        <div style="background: rgba(16, 185, 129, 0.1); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--chess-white); margin-bottom: 0.5rem;">Jorge</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 1.3rem; color: var(--accent-success);">${periodData.jorge_wins}W</div>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(periodDiv);
+            });
+        }
+        
+        function setupTimeBreakdownToggles() {
+            const monthlyBtn = document.getElementById('monthlyBtn');
+            const quarterlyBtn = document.getElementById('quarterlyBtn');
+            
+            monthlyBtn.onclick = function() {
+                currentView = 'monthly';
+                this.style.background = 'var(--accent-primary)';
+                this.style.color = 'var(--chess-black)';
+                quarterlyBtn.style.background = 'rgba(255, 255, 255, 0.1)';
+                quarterlyBtn.style.color = 'var(--chess-white)';
+                populateTimeBreakdown('monthly');
+            };
+            
+            quarterlyBtn.onclick = function() {
+                currentView = 'quarterly';
+                this.style.background = 'var(--accent-primary)';
+                this.style.color = 'var(--chess-black)';
+                monthlyBtn.style.background = 'rgba(255, 255, 255, 0.1)';
+                monthlyBtn.style.color = 'var(--chess-white)';
+                populateTimeBreakdown('quarterly');
+            };
+        }
+
+        // Initialize everything
+        window.addEventListener('load', () => {
+            console.log('=== Page Load Started ===');
+            console.log('Stats object:', stats);
+            console.log('Total games:', stats.total_games);
+            
+            // Animate Tournament Overview counters
+            console.log('Animating counters...');
+            animateCounter(document.getElementById('totalGames'), stats.total_games);
+            animateCounter(document.getElementById('totalSessions'), stats.session_stats.total_sessions);
+            animateCounter(document.getElementById('avgGamesPerSession'), stats.session_stats.avg_games_per_session, 2000, 1);
+            animateCounter(document.getElementById('avgDuration'), stats.session_stats.avg_duration_hours, 2000, 2);
+            animateCounter(document.getElementById('brutalGamesCount'), stats.brutality_stats.total_brutal_games);
+            
+            // Populate sections
+            console.log('Populating standings...');
+            populateStandings();
+            console.log('Creating color chart...');
+            createColorChart();
+            console.log('Creating methods chart...');
+            createMethodsChart();
+            console.log('Populating H2H...');
+            populateH2H();
+            console.log('Populating session stats...');
+            populateSessionStats();
+            console.log('Populating brutality stats...');
+            populateBrutalityStats();
+            console.log('Setting up time breakdown toggles...');
+            setupTimeBreakdownToggles();
+            console.log('Populating time breakdown...');
+            populateTimeBreakdown('monthly');
+            console.log('=== Initialization Complete ===');
+        });
+    </script>
+</body>
+</html>

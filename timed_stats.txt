@@ -1,0 +1,99 @@
+Chess 2025 - Timed Games Statistics
+====================================
+
+Total games in dataset: 301
+Timed games: 18
+
+====================================
+
+PLAYER STATISTICS (Timed Games Only)
+-------------------------------------
+
+Carlos:
+  Total timed games: 18
+  Wins: 9
+  Losses: 9
+  Win rate: 50.0%
+  Games as White: 10
+  Games as Black: 8
+  Wins on time: 0
+  Losses on time: 3
+
+Carey:
+  Total timed games: 1
+  Wins: 0
+  Losses: 1
+  Win rate: 0%
+  Games as White: 0
+  Games as Black: 1
+  Wins on time: 0
+  Losses on time: 0
+
+Jorge:
+  Total timed games: 17
+  Wins: 9
+  Losses: 8
+  Win rate: 52.9%
+  Games as White: 8
+  Games as Black: 9
+  Wins on time: 3
+  Losses on time: 0
+
+====================================
+
+HEAD-TO-HEAD (Timed Games Only)
+--------------------------------
+
+Carlos vs Carey:
+  Total games: 1
+  Carlos wins: 1
+  Carey wins: 0
+  Draws: 0
+
+Carlos vs Jorge:
+  Total games: 17
+  Carlos wins: 8
+  Jorge wins: 9
+  Draws: 0
+
+Carey vs Jorge:
+  Total games: 0
+  Carey wins: 0
+  Jorge wins: 0
+  Draws: 0
+
+====================================
+
+VICTORY METHODS (Timed Games)
+-----------------------------
+
+  Checkmate: 13
+  Time: 3
+  Resigned: 2
+
+====================================
+
+COLOR ADVANTAGE (Timed Games)
+-----------------------------
+
+  White wins: 7 (38.8%)
+  Black wins: 11 (61.1%)
+  Draws: 0 (0%)
+
+====================================
+
+TIMED GAME SESSIONS
+-------------------
+
+Total sessions with timed games: 4
+Average timed games per session: 4.5
+
+Sessions with 5+ timed games: 3
+
+Top sessions:
+  2/21/2025: 7 games
+  7/13/2025: 5 games
+  4/6/2025: 5 games
+
+====================================
+

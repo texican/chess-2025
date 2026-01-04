@@ -304,6 +304,15 @@ body {
 
 /* ===== RESPONSIVE ===== */
 
+/* Label toggles - desktop defaults to showing desktop labels */
+.desktop-label { display: inline; }
+.mobile-label { display: none; }
+.desktop-month { display: inline; }
+.mobile-month { display: none; }
+
+/* Brutality bars - desktop default spacing */
+.brutality-name-col { width: 80px; margin-right: var(--spacing-md); }
+
 /* Overview Stats Grid */
 .overview-stats-grid {
     display: grid;
@@ -324,10 +333,65 @@ body {
     }
 }
 
-/* Narrow screens: 1 column x 6 rows */
+/* Timed Games Player Bars - Base Styles (Desktop) */
+.timed-player-bar {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.bar-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.bar-name {
+    flex-shrink: 0;
+    width: 80px;
+}
+
+.bar-chart {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.bar-stats {
+    flex-shrink: 0;
+    width: 100px;
+    text-align: right;
+}
+
+.bar-stats-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-left: 80px;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.bar-footer {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-left: 95px;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+/* Narrow screens: 2 columns */
 @media (max-width: 480px) {
     .overview-stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -338,14 +402,51 @@ body {
     .header__title { font-size: 2.5rem; }
     .header__subtitle { font-size: 0.9rem; }
     .stats-grid { gap: var(--spacing-xs); }
-    .section { padding: var(--spacing-sm); }
+    .section { padding: 0.5rem; }
     .card { padding: 0.75rem; }
+    .session-card { padding: 0.25rem 0.5rem !important; }
     .tab-button { padding: 0.5rem 1rem; font-size: 0.9rem; }
     #total-games-number { font-size: 4rem !important; }
+    .desktop-label { display: none; }
+    .mobile-label { display: inline !important; }
+    .desktop-month { display: none; }
+    .mobile-month { display: inline !important; }
+    .timed-games-stats { grid-template-columns: repeat(2, 1fr) !important; }
+    .quarterly-stats { grid-template-columns: repeat(2, 1fr) !important; }
+    .player-highlights-grid { grid-template-columns: 1fr !important; }
+    .session-highlights-grid { grid-template-columns: 1fr !important; gap: 0 !important; box-sizing: border-box !important; }
+    .session-highlights-grid > div { padding: 0.5rem 0.25rem !important; box-sizing: border-box !important; }
+    .epic-sessions-grid { grid-template-columns: 1fr !important; }
+    
+    /* Brutality bars - mobile adjustments */
+    .brutality-bars > div { padding: 0 !important; margin: 0 !important; }
+    .brutality-name-col { margin-right: 0 !important; width: auto !important; flex-shrink: 1 !important; }
+    .brutality-bar-container { gap: 0 !important; }
+    .brutality-bars span { margin-left: 0 !important; margin-right: 0 !important; }
+    .brutality-bars > div > div { margin-right: 0 !important; margin-left: 0 !important; }
+    .brutality-bars { margin-left: 0 !important; margin-right: 0 !important; }
+    .brutality-divider { margin: 0 !important; }
+    
+    /* Timed player bars - wrap on mobile */
+    .bar-header { flex-direction: column; align-items: flex-start !important; gap: var(--spacing-sm) !important; }
+    .bar-name { width: 100% !important; margin-bottom: 0 !important; }
+    .bar-chart { width: 100% !important; flex: none !important; display: flex !important; flex-direction: row !important; height: 32px !important; margin-top: 0 !important; }
+    .bar-stats-row { margin-left: 0 !important; gap: 0.25rem !important; flex-wrap: wrap !important; margin-top: 0.5rem !important; font-size: 0.75rem !important; }
+    
+    /* Epic Session Cards - mobile adjustments */
+    .session-card { overflow: visible !important; padding: 0.5rem 0.75rem !important; }
+    .session-card-content { display: flex !important; flex-wrap: nowrap !important; gap: 0.25rem !important; }
+    .session-card-left { flex: 0 0 auto !important; min-width: 0 !important; }
+    .session-card-right { flex: 0 0 auto !important; }
+    .session-card-left > div:first-child { font-size: 0.95rem !important; margin-bottom: 0.25rem !important; }
+    .session-card-left > div:last-child { font-size: 0.7rem !important; }
+    .session-card-right > div:first-child { font-size: 0.95rem !important; font-weight: 700 !important; }
+    .session-card-right > div:last-child { font-size: 0.65rem !important; }
 }
 
 @media (min-width: 769px) {
     #total-games-number { font-size: 18rem !important; }
+    .epic-sessions-grid { grid-template-columns: repeat(2, 1fr) !important; gap: var(--spacing-md) !important; }
 }
 
 @media (max-width: 480px) {

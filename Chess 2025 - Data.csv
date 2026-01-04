@@ -1,0 +1,302 @@
+Timestamp,Players [White],Players [Black],Winner,Loss Type,Time Limit,Notes,Brutality,Venue,Match ID
+1/10/2025 22:02:26,Carey,Carlos,Black,Checkmate,,,0,,45667.9184
+1/10/2025 22:27:04,Carlos,Carey,White,Resigned,,,0,,45667.9355
+1/10/2025 23:03:40,Carey,Carlos,White,Checkmate,,,0,,45667.9609
+1/11/2025 23:38:26,Carlos,Carey,White,Checkmate,,,0,House of Tears,45668.9850
+1/11/2025 23:54:42,Carey,Carlos,Black,Checkmate,,,4,House of Tears,45668.9963
+1/12/2025 13:09:36,Jorge,Carlos,Black,Resigned,,,0,,45669.5483
+1/12/2025 13:28:34,Carlos,Jorge,Black,Checkmate,,,0,,45669.5615
+1/12/2025 13:38:13,Jorge,Carlos,Black,Checkmate,,,0,,45669.5682
+1/12/2025 14:02:50,Carlos,Jorge,White,Checkmate,,,0,,45669.5853
+2/1/2025 21:39:47,Carey,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45689.9026
+2/1/2025 22:08:43,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45689.9227
+2/1/2025 22:26:44,Carey,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45689.9352
+2/1/2025 23:24:54,Carlos,Carey,White,Resigned,,Constipated Chess Board,3,Fortalez del Arroyo Trebol,45689.9756
+2/9/2025 20:08:20,Jorge,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45697.8391
+2/9/2025 20:21:29,Carey,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45697.8483
+2/9/2025 20:29:43,Carey,Jorge,White,Resigned,,,,,45697.8540
+2/9/2025 20:55:10,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45697.8716
+2/9/2025 21:29:09,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45697.8952
+2/9/2025 21:39:17,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45697.9023
+2/9/2025 21:48:29,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45697.9087
+2/9/2025 22:11:32,Jorge,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45697.9247
+2/9/2025 22:24:25,Carlos,Jorge,White,Resigned,,,,Fortalez del Arroyo Trebol,45697.9336
+2/21/2025 12:42:11,Carlos,Jorge,Black,Checkmate,12:05:00 PM,,,Fortalez del Arroyo Trebol,45709.5293
+2/21/2025 12:47:53,Jorge,Carlos,Black,Checkmate,12:05:00 AM,,,Fortalez del Arroyo Trebol,45709.5333
+2/21/2025 12:59:31,Carlos,Jorge,Black,Time,12:05:00 PM,,,Fortalez del Arroyo Trebol,45709.5413
+2/21/2025 13:04:53,Jorge,Carlos,White,Checkmate,12:05:00 PM,,,Fortalez del Arroyo Trebol,45709.5451
+2/21/2025 13:15:04,Carlos,Jorge,Black,Time,12:05:00 PM,,,Fortalez del Arroyo Trebol,45709.5521
+2/21/2025 13:23:38,Jorge,Carlos,Black,Checkmate,12:05:00 PM,,,Fortalez del Arroyo Trebol,45709.5581
+2/21/2025 13:27:04,Carlos,Jorge,White,Checkmate,12:05:00 PM,,,Fortalez del Arroyo Trebol,45709.5605
+3/1/2025 20:47:48,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45717.8665
+3/1/2025 21:08:35,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45717.8810
+3/1/2025 21:30:13,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45717.8960
+3/1/2025 21:50:27,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45717.9100
+3/1/2025 21:56:55,Carlos,Carey,White,Checkmate,,Assassination,3,Fortalez del Arroyo Trebol,45717.9145
+3/1/2025 22:21:06,Carey,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45717.9313
+3/17/2025 17:19:54,Carey,Jorge,White,Checkmate,,,4,Fortalez del Arroyo Trebol,45733.7222
+3/17/2025 17:27:17,Jorge,Carey,White,Resigned,,,3,Fortalez del Arroyo Trebol,45733.7273
+3/17/2025 17:35:35,Carey,Jorge,White,Checkmate,,,3,,45733.7330
+3/17/2025 17:51:54,Jorge,Carey,White,Checkmate,,,2,,45733.7444
+3/17/2025 18:18:31,Carey,Jorge,Draw,Draw,,,1,Fortalez del Arroyo Trebol,45733.7629
+3/17/2025 18:39:16,Jorge,Carey,Black,Checkmate,,,3,Fortalez del Arroyo Trebol,45733.7773
+3/23/2025 15:58:44,Carlos,Carey,White,Checkmate,,Scholar's Mate,4,The Flats,45739.6658
+3/23/2025 16:10:17,Carlos,Carey,White,Checkmate,,,,The Flats,45739.6738
+3/23/2025 16:37:51,Carey,Carlos,White,Checkmate,,,,The Flats,45739.6930
+3/29/2025 23:00:10,Carlos,Carey,White,Checkmate,,Hallway of Doom,,House of Tears,45745.9584
+3/29/2025 23:52:09,Carey,Carlos,White,Checkmate,,,4,House of Tears,45745.9946
+3/30/2025 0:21:35,Carlos,Carey,White,Checkmate,,,,House of Tears,45746.0150
+4/6/2025 18:30:22,Carlos,Jorge,Draw,Stalemate,,Jorge Mulligan,,Fortalez del Arroyo Trebol,45753.7711
+4/6/2025 19:14:30,Jorge,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45753.8017
+4/6/2025 19:42:40,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45753.8213
+4/6/2025 20:00:10,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45753.8334
+4/6/2025 20:13:02,Carey,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45753.8424
+4/6/2025 20:26:47,Jorge,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45753.8519
+4/6/2025 20:37:29,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45753.8594
+4/6/2025 20:43:22,Jorge,Carlos,Black,Checkmate,12:05:00 AM,,,Fortalez del Arroyo Trebol,45753.8634
+4/6/2025 20:52:14,Carlos,Jorge,Black,Checkmate,12:05:00 AM,,,Fortalez del Arroyo Trebol,45753.8696
+4/6/2025 21:00:47,Jorge,Carlos,Black,Resigned,12:05:00 AM,,,Fortalez del Arroyo Trebol,45753.8755
+4/6/2025 21:09:51,Carlos,Jorge,White,Checkmate,5:05:00 AM,,,Fortalez del Arroyo Trebol,45753.8818
+4/6/2025 21:17:27,Jorge,Carlos,Black,Resigned,12:05:00 AM,,,Fortalez del Arroyo Trebol,45753.8871
+5/3/2025 0:00:00,Jorge,Carey,White,Checkmate,,,2,Fortalez del Arroyo Trebol,45780.0000
+5/4/2025 0:00:00,Carey,Jorge,Black,Resigned,,,,Fortalez del Arroyo Trebol,45781.0000
+5/5/2025 0:00:00,Jorge,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45782.0000
+5/9/2025 19:51:46,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45786.8276
+5/9/2025 20:02:07,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45786.8348
+5/9/2025 20:23:04,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45786.8494
+5/9/2025 20:44:42,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45786.8644
+5/9/2025 22:13:42,Jorge,Carey,Black,Checkmate,,,3,Fortalez del Arroyo Trebol,45786.92618
+5/9/2025 22:27:28,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45786.93574
+5/9/2025 23:08:09,Jorge,Carlos,Draw,Stalemate,,,,Fortalez del Arroyo Trebol,45786.96399
+5/9/2025 23:23:38,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45786.97475
+5/10/2025 20:45:43,Jorge,Carey,White,Checkmate,,,0,Fortalez del Arroyo Trebol,45787.8651
+5/11/2025 20:46:44,Carey,Jorge,White,Resigned,,,0,Fortalez del Arroyo Trebol,45788.8658
+5/12/2025 20:47:45,Jorge,Carey,White,Resigned,,Grampa was gonna force the draw via the 50 move rule; Carey tipped his king in frustration with the peanut gallery (Carlos).Carey fladgulated himself to loss.,5,Fortalez del Arroyo Trebol,45789.8665
+5/12/2025 20:50:45,Carlos,Carey,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,45789.8686
+5/13/2025 20:55:45,Carey,Carlos,White,Resigned,,,0,Fortalez del Arroyo Trebol,45790.8720
+5/22/2025 20:37:44,Carey,Carlos,Black,Checkmate,,surprise samurai shit,2,Fortalez del Arroyo Trebol,45799.85953
+5/22/2025 20:59:23,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45799.87458
+5/22/2025 21:14:56,Carey,Jorge,Black,Checkmate,,,2,Fortalez del Arroyo Trebol,45799.88537
+5/22/2025 21:30:34,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45799.89622
+5/22/2025 21:48:40,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45799.9088
+5/22/2025 22:06:30,Jorge,Carlos,Draw,Stalemate,,,,Fortalez del Arroyo Trebol,45799.92119
+5/22/2025 22:12:23,Carlos,Jorge,Black,Checkmate,,,3,Fortalez del Arroyo Trebol,45799.92526
+5/22/2025 22:32:20,Jorge,Carlos,Black,Checkmate,,,,,45799.93912
+5/22/2025 22:33:09,Carlos,Jorge,White,Resigned,,,,Fortalez del Arroyo Trebol,45799.93969
+5/22/2025 22:40:48,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45799.945
+5/22/2025 22:55:07,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45799.95494
+5/22/2025 23:08:07,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45799.96397
+5/22/2025 23:19:54,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45799.97216
+5/25/2025 16:53:28,Carlos,Jorge,White,Checkmate,,Taiga learns chess,,Fortalez del Arroyo Trebol,45802.7038
+5/25/2025 21:28:44,Jorge,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45802.89495
+5/27/2025 21:30:32,Jorge,Carey,Black,Resigned,,,,Fortalez del Arroyo Trebol,45804.8962
+5/27/2025 21:30:54,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45804.89646
+5/27/2025 21:49:18,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45804.90924
+6/8/2025 20:52:56,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45816.87009
+6/8/2025 21:01:48,Carey,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45816.87625
+6/8/2025 21:08:17,Carlos,Carey,White,Checkmate,,,4,Fortalez del Arroyo Trebol,45816.88076
+6/8/2025 21:19:08,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45816.88828
+6/8/2025 21:33:09,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45816.89803
+6/13/2025 20:29:02,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45821.85349
+6/13/2025 20:46:52,Carlos,Jorge,White,Resigned,,,,Fortalez del Arroyo Trebol,45821.86588
+6/13/2025 20:59:36,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45821.87472
+6/13/2025 21:20:39,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45821.88934
+6/13/2025 21:37:02,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45821.90072
+6/13/2025 21:53:22,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45821.91206
+6/13/2025 22:04:43,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45821.91994
+6/13/2025 22:17:12,Carlos,Jorge,White,Resigned,,,,Fortalez del Arroyo Trebol,45821.92861
+6/13/2025 22:29:21,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45821.93705
+6/13/2025 22:42:54,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45821.94645
+6/17/2025 20:46:26,Jorge,Carey,White,Checkmate,,,3,Fortalez del Arroyo Trebol,45825.86558
+6/17/2025 20:47:06,Carey,Jorge,White,Resigned,,,3,,45825.86605
+6/17/2025 20:47:32,Carey,Jorge,White,Checkmate,,,3,Fortalez del Arroyo Trebol,45825.86635
+6/17/2025 21:00:50,Jorge,Carey,Black,Checkmate,,Creative,3,Fortalez del Arroyo Trebol,45825.87558
+6/17/2025 21:06:45,Carey,Jorge,Black,Resigned,,Annoyance,4,,45825.87969
+6/17/2025 21:29:10,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45825.89525
+6/17/2025 21:48:15,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45825.90851
+6/17/2025 22:02:17,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45825.91825
+6/17/2025 22:20:36,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45825.93098
+6/17/2025 22:50:43,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45825.95189
+6/17/2025 23:08:36,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45825.96431
+7/5/2025 20:49:20,Carlos,Other,White,Checkmate,,Dan Black. Scholar's Mate,,Fortalez del Arroyo Trebol,45843.86759
+7/5/2025 21:01:03,Other,Carlos,Black,Checkmate,,Dan,,Fortalez del Arroyo Trebol,45843.87573
+7/5/2025 21:09:43,Carlos,Other,White,Checkmate,,Dan,,Fortalez del Arroyo Trebol,45843.88174
+7/5/2025 22:34:50,Other,Carlos,White,Checkmate,,Dan,,Fortalez del Arroyo Trebol,45843.94085
+7/13/2025 13:46:06,Carlos,Jorge,White,Checkmate,12:05:00 AM,,,Fortalez del Arroyo Trebol,45851.57368
+7/13/2025 13:46:28,Jorge,Carlos,White,Checkmate,12:05:00 AM,,,Fortalez del Arroyo Trebol,45851.57394
+7/13/2025 13:57:31,Carlos,Jorge,Black,Checkmate,12:05:00 AM,,,Fortalez del Arroyo Trebol,45851.58161
+7/13/2025 14:05:42,Jorge,Carlos,White,Checkmate,12:05:00 AM,,,Fortalez del Arroyo Trebol,45851.58729
+7/13/2025 14:16:00,Carlos,Jorge,Black,Time,12:05:00 AM,,,Fortalez del Arroyo Trebol,45851.59444
+7/13/2025 14:25:12,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45851.60084
+7/13/2025 14:41:18,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45851.61201
+7/13/2025 14:52:49,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45851.62001
+7/13/2025 15:02:13,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45851.62654
+7/13/2025 15:09:41,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45851.63172
+7/13/2025 15:19:50,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45851.63878
+7/23/2025 21:00:02,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45861.87502
+7/23/2025 22:02:41,Carey,Carlos,Draw,Stalemate,,three white queens. Seemingly infinite check loops. Maximum absurdity.,4,Fortalez del Arroyo Trebol,45861.91854
+7/23/2025 22:43:20,Carlos,Carey,White,Checkmate,12:07:00 AM,,,Fortalez del Arroyo Trebol,45861.94675
+8/2/2025 21:29:07,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45871.89523
+8/2/2025 21:44:53,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45871.90617
+8/2/2025 22:03:30,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45871.9191
+8/2/2025 22:26:10,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45871.93483
+8/10/2025 21:21:10,Carey,Carlos,Black,Checkmate,,,,House of Tears,45879.8897
+8/10/2025 21:29:18,Carlos,Carey,White,Resigned,,,3,House of Tears,45879.89535
+8/10/2025 21:54:48,Carey,Carlos,Black,Checkmate,,,,House of Tears,45879.91305
+8/11/2025 19:47:26,Jorge,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45880.82461
+8/11/2025 21:12:58,Carey,Jorge,White,Checkmate,,,,,45880.88401
+8/11/2025 21:13:24,Carey,Jorge,White,Checkmate,,,,,45880.8843
+8/11/2025 21:13:53,Carey,Carlos,White,Checkmate,,,2,Fortalez del Arroyo Trebol,45880.88464
+8/11/2025 21:14:14,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45880.88488
+8/11/2025 21:24:11,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45880.89179
+8/11/2025 21:32:19,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45880.89744
+8/11/2025 21:42:27,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45880.90448
+8/11/2025 21:47:28,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45880.90797
+8/11/2025 22:01:24,Carlos,Jorge,White,Resigned,,,,Fortalez del Arroyo Trebol,45880.91764
+8/23/2025 14:24:32,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45892.60037
+8/23/2025 14:41:02,Jorge,Carlos,Black,Checkmate,,Mulligan into mate,,Fortalez del Arroyo Trebol,45892.61183
+8/23/2025 14:53:51,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45892.62073
+8/23/2025 15:02:57,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45892.62705
+8/23/2025 15:19:13,Carlos,Jorge,Draw,Stalemate,,,,Fortalez del Arroyo Trebol,45892.63834
+9/6/2025 20:55:42,Jorge,Carey,Black,Resigned,,,2,,45906.87201
+9/6/2025 20:56:04,Carey,Carlos,White,Checkmate,,,2,,45906.87227
+9/6/2025 21:22:12,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45906.89041
+9/6/2025 21:42:06,Carlos,Carey,White,Checkmate,,,4,Fortalez del Arroyo Trebol,45906.90423
+9/6/2025 22:01:41,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45906.91783
+9/6/2025 22:17:25,Jorge,Carey,Black,Checkmate,,,2,,45906.92877
+9/6/2025 22:37:37,Carey,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45906.94279
+9/6/2025 22:51:15,Carlos,Jorge,Black,Checkmate,,,4,Fortalez del Arroyo Trebol,45906.95226
+9/6/2025 23:03:10,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45906.96053
+9/6/2025 23:19:57,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45906.97219
+9/6/2025 23:29:22,Jorge,Carlos,White,Resigned,,,,Fortalez del Arroyo Trebol,45906.97873
+9/23/2025 13:28:05,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45923.56117
+9/23/2025 13:34:19,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45923.5655
+9/23/2025 13:45:28,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45923.57324
+9/23/2025 14:03:49,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45923.58599
+9/23/2025 14:11:49,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45923.59153
+9/23/2025 14:20:04,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45923.59727
+9/23/2025 14:46:09,Jorge,Carlos,Draw,Stalemate,,,,Fortalez del Arroyo Trebol,45923.61538
+9/27/2025 19:46:46,Carey,Jorge,Black,Checkmate,,,1,,45927.82414
+9/27/2025 19:47:06,Jorge,Carey,Black,Resigned,,,1,,45927.82438
+9/27/2025 19:57:50,Carey,Jorge,White,Resigned,,,,,45927.83182
+9/27/2025 20:34:11,Carey,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45927.85707
+9/27/2025 20:44:22,Carlos,Carey,White,Resigned,,,,Fortalez del Arroyo Trebol,45927.86415
+9/27/2025 20:59:33,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45927.87469
+9/27/2025 21:08:26,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45927.88085
+9/27/2025 21:24:16,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45927.89185
+9/27/2025 21:38:21,Carey,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45927.90163
+9/27/2025 21:46:33,Jorge,Carey,White,Checkmate,,,3,Fortalez del Arroyo Trebol,45927.90732
+9/27/2025 21:59:02,Carey,Jorge,White,Resigned,,,0,Fortalez del Arroyo Trebol,
+9/27/2025 22:20:52,Carlos,Carey,White,Resigned,,,0,Fortalez del Arroyo Trebol,
+9/27/2025 22:33:53,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/27/2025 22:55:04,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/27/2025 23:11:39,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/27/2025 23:19:38,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/27/2025 23:37:03,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/27/2025 23:57:05,Carlos,Jorge,Draw,Stalemate,,50-Move Rule,0,Fortalez del Arroyo Trebol,
+9/28/2025 0:10:06,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/28/2025 0:16:50,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/28/2025 0:21:20,Jorge,Carlos,Black,Checkmate,,Textbook Stafford Gambit,0,Fortalez del Arroyo Trebol,
+9/28/2025 0:34:29,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/28/2025 0:45:53,Jorge,Carlos,Black,Resigned,,,0,Fortalez del Arroyo Trebol,
+9/28/2025 0:53:23,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,
+9/28/2025 1:05:02,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,
+10/11/2025 21:48:31,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45941.9087
+10/11/2025 21:49:22,Carey,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45941.90928
+10/11/2025 21:54:46,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45941.91303
+10/11/2025 21:58:47,Carey,Carlos,Black,Checkmate,,,4,Fortalez del Arroyo Trebol,45941.91583
+10/12/2025 13:11:43,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45942.5498
+10/12/2025 13:24:01,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45942.55835
+10/12/2025 13:31:19,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45942.56341
+10/12/2025 13:43:57,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45942.57219
+10/12/2025 13:57:14,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45942.58141
+10/12/2025 14:28:38,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45942.60321
+10/12/2025 14:45:37,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45942.61501
+10/18/2025 11:57:13,Jorge,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45948.49807
+10/18/2025 12:27:28,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45948.51907
+10/26/2025 18:01:56,Carey,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45956.75135
+10/26/2025 18:24:46,Carlos,Carey,Black,Checkmate,,Carlos used mulligan,,,45956.7672
+10/26/2025 18:25:12,Carey,Jorge,White,Checkmate,,Cs mulligan ,1,,45956.7675
+10/26/2025 18:31:15,Jorge,Carey,Black,Resigned,,,3,Fortalez del Arroyo Trebol,45956.7717
+10/26/2025 18:43:48,Carey,Jorge,Black,Resigned,,,2,,45956.78042
+10/26/2025 19:03:21,Jorge,Carey,White,Checkmate,,,2,,45956.79399
+11/2/2025 15:38:27,Jorge,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45963.6517
+11/2/2025 16:06:00,Carlos,Jorge,White,Resigned,,,,Fortalez del Arroyo Trebol,45963.67083
+11/5/2025 12:20:24,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45966.51417
+11/5/2025 12:52:15,Jorge,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45966.53628
+11/5/2025 12:58:10,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45966.54039
+11/5/2025 13:16:33,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45966.55316
+11/5/2025 13:28:51,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45966.5617
+11/5/2025 13:35:48,Jorge,Carlos,Black,Checkmate,,,4,Fortalez del Arroyo Trebol,45966.56653
+11/5/2025 13:45:34,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45966.57331
+11/5/2025 13:59:52,Jorge,Carlos,White,Checkmate,,,3,Fortalez del Arroyo Trebol,45966.58324
+11/5/2025 14:13:03,Carlos,Jorge,White,Resigned,,,,Fortalez del Arroyo Trebol,45966.59239
+11/5/2025 14:29:14,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45966.60364
+11/5/2025 14:43:44,Jorge,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45966.61371
+11/5/2025 15:05:12,Jorge,Carlos,Draw,Stalemate,,,,Fortalez del Arroyo Trebol,45966.62861
+11/9/2025 0:49:35,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45970.03443
+11/9/2025 1:08:38,Carey,Carlos,White,Checkmate,,,4,Fortalez del Arroyo Trebol,45970.04766
+11/9/2025 1:40:00,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45970.06944
+11/9/2025 13:49:01,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45970.57571
+11/9/2025 14:05:52,Jorge,Carlos,White,Checkmate,,,,Fortalez del Arroyo Trebol,45970.5874
+11/9/2025 14:21:45,Carlos,Jorge,White,Checkmate,,,,Fortalez del Arroyo Trebol,45970.59844
+11/9/2025 14:28:00,Jorge,Carlos,Black,Checkmate,,,3,Fortalez del Arroyo Trebol,45970.60278
+11/9/2025 14:34:56,Carlos,Jorge,White,Checkmate,,,3,Fortalez del Arroyo Trebol,45970.60759
+11/9/2025 14:44:58,Jorge,Carlos,Black,Checkmate,,,3,Fortalez del Arroyo Trebol,45970.61456
+11/9/2025 14:57:43,Carlos,Jorge,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45970.62341
+11/9/2025 15:22:46,Jorge,Carlos,Black,Resigned,,,,Fortalez del Arroyo Trebol,45970.64081
+11/12/2025 21:46:23,Carlos,Carey,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45973.90721
+11/12/2025 22:13:24,Carey,Carlos,Black,Checkmate,,,,Fortalez del Arroyo Trebol,45973.92597
+11/12/2025 22:40:00,Carlos,Carey,White,Checkmate,,,,Fortalez del Arroyo Trebol,45973.94445
+11/22/2025 21:57:08,Carey,Carlos,Black,Checkmate,,,0,House of Tears,45983.91468
+11/22/2025 22:21:38,Carlos,Carey,White,Checkmate,,,0,House of Tears,45983.9317
+11/23/2025 12:31:30,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,45984.52187
+11/23/2025 12:43:45,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,45984.53038
+11/23/2025 13:08:26,Carlos,Jorge,White,Resigned,,,0,Fortalez del Arroyo Trebol,45984.54752
+12/6/2025 21:03:42,Carlos,Carey,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,45997.87757
+12/6/2025 22:01:14,Other,Carey,Black,Checkmate,,Dan Carillo guest starring,2,Fortalez del Arroyo Trebol,45997.91753
+12/16/2025 20:07:08,Carey,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46007.83828
+12/16/2025 20:25:01,Carlos,Carey,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46007.85071
+12/16/2025 20:55:24,Carlos,Carey,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46007.87181
+12/16/2025 21:24:52,Carey,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46007.89226
+12/24/2025 21:32:16,Carlos,Carey,Black,Checkmate,,Dan carillo,2,Fortalez del Arroyo Trebol,46015.89741
+12/24/2025 21:49:38,Carlos,Jorge,Black,Checkmate,,,2,Fortalez del Arroyo Trebol,46015.90947
+12/24/2025 22:04:23,Carlos,Carey,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.91971
+12/24/2025 22:09:47,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.92346
+12/24/2025 22:10:43,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.9241
+12/24/2025 22:11:18,Carlos,Jorge,White,Checkmate,,Mulligan out of stalemate,0,,46015.92451
+12/24/2025 22:12:39,Carlos,Carey,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.92545
+12/24/2025 22:13:26,Jorge,Carey,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.926
+12/24/2025 23:28:35,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.97818
+12/24/2025 23:37:19,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.98424
+12/24/2025 23:49:23,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46015.99263
+12/25/2025 0:03:42,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.00257
+12/25/2025 0:17:29,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.01214
+12/25/2025 0:32:50,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.0228
+12/25/2025 0:48:58,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.034
+12/25/2025 1:00:02,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.04169
+12/25/2025 1:18:50,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.05474
+12/25/2025 1:36:27,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.06698
+12/25/2025 1:55:53,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46016.08047
+12/30/2025 20:28:51,Carey,Carlos,Black,Resigned,,,0,Fortalez del Arroyo Trebol,46021.85337
+12/30/2025 20:51:29,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.86909
+12/30/2025 20:58:15,Carey,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.87378
+12/30/2025 21:26:24,Carlos,Carey,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.89334
+12/30/2025 21:37:47,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.90124
+12/30/2025 22:01:55,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.918
+12/30/2025 22:08:32,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.92259
+12/30/2025 22:18:16,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.92935
+12/30/2025 22:34:54,Carlos,Carey,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.9409
+12/30/2025 22:43:19,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.94674
+12/30/2025 22:53:21,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.95372
+12/30/2025 23:01:18,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.95924
+12/30/2025 23:07:36,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.96361
+12/30/2025 23:23:36,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.97473
+12/30/2025 23:37:45,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46021.98455
+12/30/2025 23:52:28,Jorge,Carlos,Black,Resigned,,,0,Fortalez del Arroyo Trebol,46021.99477
+12/31/2025 0:01:08,Carlos,Jorge,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46022.00079
+12/31/2025 0:12:19,Jorge,Carlos,White,Checkmate,,,0,Fortalez del Arroyo Trebol,46022.00856
+12/31/2025 0:20:23,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46022.01415
+12/31/2025 0:34:18,Jorge,Carlos,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46022.02382
+12/31/2025 0:43:08,Carlos,Jorge,Black,Checkmate,,,0,Fortalez del Arroyo Trebol,46022.02995
+12/31/2025 0:51:03,Jorge,Carlos,Black,Resigned,,,0,Fortalez del Arroyo Trebol,46022.03545
