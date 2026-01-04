@@ -224,6 +224,39 @@ body {
     color: var(--color-text-secondary);
 }
 
+/* ===== BRUTALITY BARS ===== */
+.brutality-rankings-card {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.brutality-rankings-card .subsection-title {
+    padding-left: 0.5rem;
+}
+
+.brutality-rankings-card .brutality-header {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.brutality-bar-container {
+    max-width: none !important;
+}
+
+/* ===== SESSION HIGHLIGHTS GRID ===== */
+.session-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+}
+
+/* ===== SAVAGE MOMENTS GRID ===== */
+.savage-moments-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
 /* ===== NESTED CONTENT ===== */
 .nested-item {
     background: var(--bg-nested-dark);
@@ -288,6 +321,88 @@ body {
     color: var(--color-bg-primary);
 }
 
+/* ===== FOLDER TABS ===== */
+.folder-tabs-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: var(--color-bg-primary);
+    padding: 1rem 1rem 0 1rem;
+    position: relative;
+}
+
+.folder-tabs-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+}
+
+.folder-tab {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.folder-tab-label {
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    background: rgba(26, 31, 58, 0.6);
+    color: var(--tab-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 2px solid var(--tab-color);
+    border-bottom: none;
+    transition: all 0.3s ease;
+    opacity: 0.4;
+}
+
+.folder-tab:hover:not(.folder-tab--active) .folder-tab-label {
+    background: rgba(26, 31, 58, 0.9);
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.folder-tab--active .folder-tab-label {
+    background: var(--color-bg-secondary);
+    color: var(--tab-color);
+    border-color: var(--tab-color);
+    border-bottom: 2px solid var(--color-bg-secondary);
+    z-index: 2;
+    transform: translateY(2px);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.folder-content {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-top: 2px solid rgba(156, 163, 175, 0.3);
+    position: relative;
+    z-index: 1;
+    transition: border-top-color 0.3s ease;
+}
+
+.folder-content[data-active-player="Carlos"] {
+    border-top-color: #7c3aed;
+}
+
+.folder-content[data-active-player="Carey"] {
+    border-top-color: #00d4ff;
+}
+
+.folder-content[data-active-player="Jorge"] {
+    border-top-color: #10b981;
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -309,6 +424,8 @@ body {
 .mobile-label { display: none; }
 .desktop-month { display: inline; }
 .mobile-month { display: none; }
+.desktop-subtitle { display: inline; }
+.mobile-subtitle { display: none; }
 
 /* Brutality bars - desktop default spacing */
 .brutality-name-col { width: 80px; margin-right: var(--spacing-md); }
@@ -396,11 +513,13 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container { padding: var(--spacing-sm); }
+    body { overflow-y: scroll; overflow-x: hidden; }
+    .container { max-width: none; }
+    .header { padding: 1.5rem 0.5rem 1rem 0.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
     .stat-number { font-size: 2.5rem; }
     .stat-number--large { font-size: 3.5rem; }
-    .header__title { font-size: 2.5rem; }
-    .header__subtitle { font-size: 0.9rem; }
+    .header__title { font-size: 2.5rem; margin-left: 0; margin-right: 0; margin: 0; text-align: center; }
+    .header__subtitle { font-size: 0.85rem; max-width: min(85%, 25ch); margin: 0 auto; word-break: break-word; letter-spacing: 0; text-align: center; }
     .stats-grid { gap: var(--spacing-xs); }
     .section { padding: 0.5rem; }
     .card { padding: 0.75rem; }
@@ -411,17 +530,35 @@ body {
     .mobile-label { display: inline !important; }
     .desktop-month { display: none; }
     .mobile-month { display: inline !important; }
+    .desktop-subtitle { display: none; }
+    .mobile-subtitle { display: inline !important; }
     .timed-games-stats { grid-template-columns: repeat(2, 1fr) !important; }
     .quarterly-stats { grid-template-columns: repeat(2, 1fr) !important; }
     .player-highlights-grid { grid-template-columns: 1fr !important; }
-    .session-highlights-grid { grid-template-columns: 1fr !important; gap: 0 !important; box-sizing: border-box !important; }
-    .session-highlights-grid > div { padding: 0.5rem 0.25rem !important; box-sizing: border-box !important; }
-    .epic-sessions-grid { grid-template-columns: 1fr !important; }
-    
+    .session-highlights-grid { grid-template-columns: repeat(2, 1fr) !important; gap: var(--spacing-sm) !important; }
+    .session-highlight-card { padding: 0.5rem !important; }
+    .session-highlight-date { font-size: 0.85rem !important; margin-bottom: 0.25rem !important; }
+    .session-highlight-games { font-size: 0.75rem !important; margin-bottom: 0.25rem !important; }
+    .session-highlight-details { font-size: 0.7rem !important; line-height: 1.4 !important; }
+    .savage-moments-grid { grid-template-columns: 1fr !important; }
+    .epic-sessions-grid { grid-template-columns: repeat(2, 1fr) !important; gap: var(--spacing-sm) !important; }
+    .epic-sessions-grid .session-card { padding: 0.5rem !important; min-height: 0 !important; }
+    .epic-sessions-grid .session-card-content { flex-direction: column !important; align-items: flex-start !important; gap: 0.5rem !important; }
+    .epic-sessions-grid .session-card-left { width: 100% !important; }
+    .epic-sessions-grid .session-card-left > div:first-child { font-size: 0.95rem !important; margin-bottom: 0.25rem !important; }
+    .epic-sessions-grid .session-card-left > div:last-child { font-size: 0.7rem !important; line-height: 1.6 !important; }
+    .epic-sessions-grid .session-card-left > div:last-child span { white-space: nowrap !important; }
+    .epic-sessions-grid .session-card-right { width: 100% !important; text-align: left !important; }
+    .epic-sessions-grid .session-card-right > div:first-child { font-size: 1.1rem !important; }
+    .epic-sessions-grid .session-card-right > div:first-child span { font-size: 0.75rem !important; }
+    .epic-sessions-grid .session-card-right > div:last-child { font-size: 0.7rem !important; }
+
     /* Brutality bars - mobile adjustments */
     .brutality-bars > div { padding: 0 !important; margin: 0 !important; }
-    .brutality-name-col { margin-right: 0 !important; width: auto !important; flex-shrink: 1 !important; }
-    .brutality-bar-container { gap: 0 !important; }
+    .brutality-name-col { margin-right: 0 !important; width: 0 !important; flex-shrink: 0 !important; }
+    .brutality-header-spacer { width: 0 !important; margin-right: 0 !important; }
+    .brutality-mobile-name { display: block !important; }
+    .brutality-bar-container { gap: 0 !important; padding-right: 0 !important; }
     .brutality-bars span { margin-left: 0 !important; margin-right: 0 !important; }
     .brutality-bars > div > div { margin-right: 0 !important; margin-left: 0 !important; }
     .brutality-bars { margin-left: 0 !important; margin-right: 0 !important; }
@@ -432,6 +569,12 @@ body {
     .bar-name { width: 100% !important; margin-bottom: 0 !important; }
     .bar-chart { width: 100% !important; flex: none !important; display: flex !important; flex-direction: row !important; height: 32px !important; margin-top: 0 !important; }
     .bar-stats-row { margin-left: 0 !important; gap: 0.25rem !important; flex-wrap: wrap !important; margin-top: 0.5rem !important; font-size: 0.75rem !important; }
+
+    /* Folder tabs - mobile adjustments */
+    .folder-tabs-container { padding: 0.5rem 0.5rem 0 0.5rem; flex-wrap: wrap; gap: 0.5rem; }
+    .folder-tab-label { padding: 0.5rem 1rem; font-size: 0.9rem; }
+    .folder-tabs-title { font-size: 0.85rem; padding-bottom: 0.5rem; }
+    .folder-content { padding: var(--spacing-md); }
     
     /* Epic Session Cards - mobile adjustments */
     .session-card { overflow: visible !important; padding: 0.5rem 0.75rem !important; }

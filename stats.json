@@ -61,7 +61,7 @@
     "Checkmate": 238
   },
   "brutality": {
-    "totalBrutalGames": 47,
+    "totalBrutalGames": 48,
     "byPlayer": {
       "Carey": {
         "inflicted": 45,
@@ -69,10 +69,10 @@
       },
       "Carlos": {
         "inflicted": 44,
-        "suffered": 26
+        "suffered": 29
       },
       "Jorge": {
-        "inflicted": 41,
+        "inflicted": 44,
         "suffered": 44
       }
     },

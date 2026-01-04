@@ -16,7 +16,7 @@ const CONFIG = {
 };
 
 // ===== STATISTICS DATA =====
-let STATS = {"totalGames":296,"players":["Carey","Carlos","Jorge"],"playerStats":{"Carey":{"totalGames":122,"wins":60,"losses":60,"winRate":49},"Carlos":{"totalGames":255,"wins":136,"losses":111,"winRate":53},"Jorge":{"totalGames":215,"wins":91,"losses":116,"winRate":42}},"headToHead":{"Carey_vs_Carlos":{"total":81,"player1":"Carey","player2":"Carlos","player1Wins":36,"player2Wins":44,"draws":1},"Carlos_vs_Jorge":{"total":174,"player1":"Carlos","player2":"Jorge","player1Wins":92,"player2Wins":75,"draws":7},"Carey_vs_Jorge":{"total":41,"player1":"Carey","player2":"Jorge","player1Wins":24,"player2Wins":16,"draws":1}},"colorStats":{"whiteWins":141,"blackWins":146,"draws":9},"victoryMethods":{"Draw":9,"Time":3,"Resigned":46,"Checkmate":238},"brutality":{"totalBrutalGames":47,"byPlayer":{"Carey":{"inflicted":45,"suffered":60},"Carlos":{"inflicted":44,"suffered":26},"Jorge":{"inflicted":41,"suffered":44}},"topGames":[{"date":"5/12/2025","winner":"Jorge","loser":"Carey","rating":5,"note":"Grampa was gonna force the draw via the 50 move rule; Carey tipped his king in frustration with the peanut gallery (Carlos).Carey fladgulated himself to loss."},{"date":"3/23/2025","winner":"Carlos","loser":"Carey","rating":4,"note":"Scholar's Mate"},{"date":"6/17/2025","winner":"Carey","loser":"Jorge","rating":4,"note":"Annoyance"},{"date":"7/23/2025","winner":"Draw","loser":"Carey vs Carlos","rating":4,"note":"three white queens. Seemingly infinite check loops. Maximum absurdity."},{"date":"9/6/2025","winner":"Carlos","loser":"Carey","rating":4,"note":""}]},"timeStats":{"peakHour":21,"peakHourGames":62,"byPeriod":{"Night":165,"Morning":1,"Afternoon":71,"Evening":59}},"sessions":{"total":48,"avgGames":6,"epicSessions":[{"date":"9/27/2025","games":25,"players":"Carey, Carlos, Jorge","hours":5.3,"wins":{"Carlos":11,"Jorge":9,"Carey":4}},{"date":"12/30/2025","games":22,"players":"Carey, Carlos, Jorge","hours":4.37,"wins":{"Carlos":12,"Jorge":9,"Carey":1}},{"date":"12/24/2025","games":19,"players":"Carey, Carlos, Jorge","hours":4.39,"wins":{"Carlos":8,"Jorge":8,"Carey":3}},{"date":"5/22/2025","games":13,"players":"Carey, Carlos, Jorge","hours":2.7,"wins":{"Jorge":7,"Carlos":5,"Carey":0}},{"date":"11/5/2025","games":12,"players":"Carlos, Jorge","hours":3.0,"wins":{"Carlos":7,"Jorge":4,"Carey":0}},{"date":"4/6/2025","games":12,"players":"Carey, Carlos, Jorge","hours":3.0,"wins":{"Carlos":9,"Carey":1,"Jorge":1}},{"date":"7/13/2025","games":11,"players":"Carlos, Jorge","hours":2.75,"wins":{"Jorge":8,"Carlos":3,"Carey":0}},{"date":"6/17/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Jorge":5,"Carey":4,"Carlos":2}},{"date":"12/24/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Carlos":4,"Jorge":4,"Carey":3}},{"date":"11/9/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Carlos":8,"Jorge":2,"Carey":1}},{"date":"9/6/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Carlos":4,"Jorge":4,"Carey":3}},{"date":"6/13/2025","games":10,"players":"Carlos, Jorge","hours":2.5,"wins":{"Jorge":6,"Carlos":4,"Carey":0}}]},"streaks":{"Carey":8,"Carlos":11,"Jorge":8},"monthly":{"January":{"games":9,"wins":{"Carlos":7,"Carey":1,"Jorge":1},"losses":{"Carlos":2,"Carey":4,"Jorge":3}},"February":{"games":20,"wins":{"Carlos":10,"Carey":6,"Jorge":4},"losses":{"Carlos":7,"Carey":3,"Jorge":10}},"March":{"games":18,"wins":{"Carlos":7,"Carey":8,"Jorge":2},"losses":{"Carlos":5,"Carey":9,"Jorge":3}},"April":{"games":12,"wins":{"Carlos":9,"Carey":1,"Jorge":1},"losses":{"Carlos":1,"Carey":2,"Jorge":8}},"May":{"games":34,"wins":{"Carlos":8,"Carey":8,"Jorge":16},"losses":{"Carlos":15,"Carey":6,"Jorge":11}},"June":{"games":26,"wins":{"Carlos":8,"Carey":7,"Jorge":11},"losses":{"Carlos":13,"Carey":6,"Jorge":7}},"July":{"games":14,"wins":{"Carlos":4,"Carey":1,"Jorge":8},"losses":{"Carlos":9,"Carey":1,"Jorge":3}},"August":{"games":22,"wins":{"Carlos":10,"Carey":8,"Jorge":3},"losses":{"Carlos":8,"Carey":4,"Jorge":9}},"September":{"games":43,"wins":{"Carlos":20,"Carey":7,"Jorge":14},"losses":{"Carlos":13,"Carey":7,"Jorge":21}},"October":{"games":19,"wins":{"Carlos":7,"Carey":4,"Jorge":8},"losses":{"Carlos":8,"Carey":6,"Jorge":5}},"November":{"games":33,"wins":{"Carlos":24,"Carey":2,"Jorge":6},"losses":{"Carlos":8,"Carey":6,"Jorge":18}},"December":{"games":46,"wins":{"Carlos":22,"Carey":7,"Jorge":17},"losses":{"Carlos":22,"Carey":6,"Jorge":18}}},"quarterly":{"Q1":{"games":47,"wins":{"Carlos":24,"Carey":15,"Jorge":7}},"Q2":{"games":72,"wins":{"Carlos":25,"Carey":16,"Jorge":28}},"Q3":{"games":79,"wins":{"Carlos":34,"Carey":16,"Jorge":25}},"Q4":{"games":98,"wins":{"Carlos":53,"Carey":13,"Jorge":31}}}};
+let STATS = {"totalGames":296,"players":["Carey","Carlos","Jorge"],"playerStats":{"Carey":{"totalGames":122,"wins":60,"losses":60,"winRate":49},"Carlos":{"totalGames":255,"wins":136,"losses":111,"winRate":53},"Jorge":{"totalGames":215,"wins":91,"losses":116,"winRate":42}},"headToHead":{"Carey_vs_Carlos":{"total":81,"player1":"Carey","player2":"Carlos","player1Wins":36,"player2Wins":44,"draws":1},"Carlos_vs_Jorge":{"total":174,"player1":"Carlos","player2":"Jorge","player1Wins":92,"player2Wins":75,"draws":7},"Carey_vs_Jorge":{"total":41,"player1":"Carey","player2":"Jorge","player1Wins":24,"player2Wins":16,"draws":1}},"colorStats":{"whiteWins":141,"blackWins":146,"draws":9},"victoryMethods":{"Draw":9,"Time":3,"Resigned":46,"Checkmate":238},"brutality":{"totalBrutalGames":48,"byPlayer":{"Carey":{"inflicted":45,"suffered":60},"Carlos":{"inflicted":44,"suffered":29},"Jorge":{"inflicted":44,"suffered":44}},"topGames":[{"date":"5/12/2025","winner":"Jorge","loser":"Carey","rating":5,"note":"Grampa was gonna force the draw via the 50 move rule; Carey tipped his king in frustration with the peanut gallery (Carlos).Carey fladgulated himself to loss."},{"date":"3/23/2025","winner":"Carlos","loser":"Carey","rating":4,"note":"Scholar's Mate"},{"date":"6/17/2025","winner":"Carey","loser":"Jorge","rating":4,"note":"Annoyance"},{"date":"7/23/2025","winner":"Draw","loser":"Carey vs Carlos","rating":4,"note":"three white queens. Seemingly infinite check loops. Maximum absurdity."},{"date":"9/6/2025","winner":"Carlos","loser":"Carey","rating":4,"note":""},{"date":"12/30/2025","winner":"Jorge","loser":"Carlos","rating":3,"note":""}]},"timeStats":{"peakHour":21,"peakHourGames":62,"byPeriod":{"Night":165,"Morning":1,"Afternoon":71,"Evening":59}},"sessions":{"total":48,"avgGames":6,"epicSessions":[{"date":"9/27/2025","games":25,"players":"Carey, Carlos, Jorge","hours":5.3,"wins":{"Carlos":11,"Jorge":9,"Carey":4}},{"date":"12/30/2025","games":22,"players":"Carey, Carlos, Jorge","hours":4.37,"wins":{"Carlos":12,"Jorge":9,"Carey":1}},{"date":"12/24/2025","games":19,"players":"Carey, Carlos, Jorge","hours":4.39,"wins":{"Carlos":8,"Jorge":8,"Carey":3}},{"date":"5/22/2025","games":13,"players":"Carey, Carlos, Jorge","hours":2.7,"wins":{"Jorge":7,"Carlos":5,"Carey":0}},{"date":"11/5/2025","games":12,"players":"Carlos, Jorge","hours":3.0,"wins":{"Carlos":7,"Jorge":4,"Carey":0}},{"date":"4/6/2025","games":12,"players":"Carey, Carlos, Jorge","hours":3.0,"wins":{"Carlos":9,"Carey":1,"Jorge":1}},{"date":"7/13/2025","games":11,"players":"Carlos, Jorge","hours":2.75,"wins":{"Jorge":8,"Carlos":3,"Carey":0}},{"date":"6/17/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Jorge":5,"Carey":4,"Carlos":2}},{"date":"12/24/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Carlos":4,"Jorge":4,"Carey":3}},{"date":"11/9/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Carlos":8,"Jorge":2,"Carey":1}},{"date":"9/6/2025","games":11,"players":"Carey, Carlos, Jorge","hours":2.75,"wins":{"Carlos":4,"Jorge":4,"Carey":3}},{"date":"6/13/2025","games":10,"players":"Carlos, Jorge","hours":2.5,"wins":{"Jorge":6,"Carlos":4,"Carey":0}}]},"streaks":{"Carey":8,"Carlos":11,"Jorge":8},"monthly":{"January":{"games":9,"wins":{"Carlos":7,"Carey":1,"Jorge":1},"losses":{"Carlos":2,"Carey":4,"Jorge":3}},"February":{"games":20,"wins":{"Carlos":10,"Carey":6,"Jorge":4},"losses":{"Carlos":7,"Carey":3,"Jorge":10}},"March":{"games":18,"wins":{"Carlos":7,"Carey":8,"Jorge":2},"losses":{"Carlos":5,"Carey":9,"Jorge":3}},"April":{"games":12,"wins":{"Carlos":9,"Carey":1,"Jorge":1},"losses":{"Carlos":1,"Carey":2,"Jorge":8}},"May":{"games":34,"wins":{"Carlos":8,"Carey":8,"Jorge":16},"losses":{"Carlos":15,"Carey":6,"Jorge":11}},"June":{"games":26,"wins":{"Carlos":8,"Carey":7,"Jorge":11},"losses":{"Carlos":13,"Carey":6,"Jorge":7}},"July":{"games":14,"wins":{"Carlos":4,"Carey":1,"Jorge":8},"losses":{"Carlos":9,"Carey":1,"Jorge":3}},"August":{"games":22,"wins":{"Carlos":10,"Carey":8,"Jorge":3},"losses":{"Carlos":8,"Carey":4,"Jorge":9}},"September":{"games":43,"wins":{"Carlos":20,"Carey":7,"Jorge":14},"losses":{"Carlos":13,"Carey":7,"Jorge":21}},"October":{"games":19,"wins":{"Carlos":7,"Carey":4,"Jorge":8},"losses":{"Carlos":8,"Carey":6,"Jorge":5}},"November":{"games":33,"wins":{"Carlos":24,"Carey":2,"Jorge":6},"losses":{"Carlos":8,"Carey":6,"Jorge":18}},"December":{"games":46,"wins":{"Carlos":22,"Carey":7,"Jorge":17},"losses":{"Carlos":22,"Carey":6,"Jorge":18}}},"quarterly":{"Q1":{"games":47,"wins":{"Carlos":24,"Carey":15,"Jorge":7}},"Q2":{"games":72,"wins":{"Carlos":25,"Carey":16,"Jorge":28}},"Q3":{"games":79,"wins":{"Carlos":34,"Carey":16,"Jorge":25}},"Q4":{"games":98,"wins":{"Carlos":53,"Carey":13,"Jorge":31}}}};
 
 // ===== PLAYER COLOR PERFORMANCE DATA =====
 const PLAYER_COLOR_STATS = {
@@ -167,7 +167,14 @@ const Components = {
                         <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${avgSessionMinutes}">0</div>
                         <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Mins/Session</div>
                     </div>
-
+                   
+                    <!-- Timed Games Card -->
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                    <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">5:00 Mins</div>
+                    <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${timedGames}">0</div>
+                    <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Timed Games</div>
+                    </div>
+ 
                     <!-- Brutal Games Card -->
                     <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(220, 38, 38, 0.05); border: 1px solid rgba(220, 38, 38, 0.2); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
                         <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(239, 68, 68, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Brutality</div>
@@ -175,20 +182,13 @@ const Components = {
                         <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Savage Games</div>
                     </div>
 
-                    <!-- Timed Games Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">5:00 Mins</div>
-                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${timedGames}">0</div>
-                        <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Timed Games</div>
-                    </div>
-
                     <!-- Longest Streak Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(251, 191, 36, 0.05); border: 1px solid rgba(251, 191, 36, 0.2); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.55rem, 1.8vw, 0.75rem); font-weight: 600; color: rgba(251, 191, 36, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">
+                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(124, 58, 237, 0.05); border: 1px solid rgba(124, 58, 237, 0.2); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
+                        <div style="font-size: clamp(0.55rem, 1.8vw, 0.75rem); font-weight: 600; color: rgba(124, 58, 237, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">
                             <span class="desktop-label">Consecutive Wins</span>
                             <span class="mobile-label" style="display: none;">Consec Wins</span>
                         </div>
-                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: #fbbf24; line-height: 0.85; max-width: 100%;" data-count="${Math.max(...Object.values(STATS.streaks))}">0</div>
+                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: #7c3aed; line-height: 0.85; max-width: 100%;" data-count="${Math.max(...Object.values(STATS.streaks))}">0</div>
                         <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Best Streak</div>
                     </div>
                 </div>
@@ -218,18 +218,22 @@ const Components = {
                 <div class="${index < sortedPlayers.length - 1 ? 'mb-lg' : ''}">
                     <div style="display: flex; gap: var(--spacing-md); align-items: flex-start;">
                         <div style="flex-shrink: 0;">
-                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: ${color}; margin: 0;">${player}</h3>
+                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: ${color}; margin: 0 0 0.25rem 0;">${player}</h3>
+                            <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);">
+                                <span class="desktop-label">${stats.totalGames} total games</span>
+                                <span class="mobile-label" style="display: none;">${stats.totalGames} games</span>
+                            </div>
                         </div>
                         <div style="flex: 1;">
-                            <div style="background: rgba(255,255,255,0.05); height: 32px; border-radius: var(--radius-sm); overflow: hidden; position: relative; margin-bottom: var(--spacing-xs);">
+                            <div style="background: rgba(255,255,255,0.05); height: 32px; border-radius: var(--radius-sm); overflow: visible; position: relative;">
                                 <div style="background: ${gradient}; height: 100%; width: ${winRate}%; border-radius: var(--radius-sm) 0 0 var(--radius-sm); transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); display: flex; align-items: center; padding-left: 0.75rem;">
-                                    <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--color-bg-secondary); font-size: 0.85rem;">${stats.wins}W - ${stats.losses}L - ${draws}D</span>
+                                    <span class="desktop-label" style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--color-bg-secondary); font-size: 0.85rem;">${stats.wins}W - ${stats.losses}L - ${draws}D</span>
                                 </div>
                                 ${drawPercentage > 0 ? `<div style="background: var(--color-accent-neutral); height: 100%; width: ${drawPercentage}%; position: absolute; left: ${winRate}%; top: 0;"></div>` : ''}
                                 <div style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: ${color}; font-size: 1.1rem;">${stats.winRate}%</div>
                             </div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);">
-                                ${stats.totalGames} total games
+                            <div class="mobile-label" style="display: none; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.25rem;">
+                                ${stats.wins}W - ${stats.losses}L - ${draws}D
                             </div>
                         </div>
                     </div>
@@ -249,11 +253,11 @@ const Components = {
         const methods = STATS.victoryMethods;
 
         const methodColors = {
-            'Checkmate': '#10b981',
-            'Resigned': '#f59e0b',
-            'Stalemate': '#6b7280',
-            'Time': '#ef4444',
-            'Draw': '#9ca3af'
+            'Checkmate': CONFIG.playerColors.Carey,   // Cyan
+            'Resigned': CONFIG.playerColors.Jorge,    // Green
+            'Time': '#ef4444',                         // Red
+            'Draw': CONFIG.playerColors.Carlos,        // Purple
+            'Stalemate': '#6b7280'                     // Grey
         };
 
         const methodData = {
@@ -303,15 +307,16 @@ const Components = {
                     <div class="bar-header">
                         <div class="bar-name">
                             <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${color}; margin: 0;">${player}</h3>
+                            <div class="desktop-label bar-record" style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${color}; font-size: 0.9rem; margin-top: 0.25rem;">${stats.wins}W-${stats.losses}L</div>
                         </div>
-                        <div class="bar-chart">
+                        <div class="bar-chart" style="position: relative;">
                             <div style="background: linear-gradient(90deg, ${color}cc, ${color}); height: 100%; flex: ${stats.wins}; border-radius: 0;"></div>
-                            <div style="background: rgba(255, 255, 255, 0.1); height: 100%; flex: ${stats.losses}; border-radius: 0;"></div>
+                            <div style="background: #000000; height: 100%; flex: ${stats.losses}; border-radius: 0;"></div>
+                            <div style="position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${color}; font-size: 0.9rem;">${stats.winRate.toFixed(1)}%</div>
                         </div>
                     </div>
                     <div class="bar-stats-row">
-                        <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${color}; font-size: 1rem;">${stats.wins}W-${stats.losses}L</div>
-                        <div style="font-family: 'JetBrains Mono', monospace; font-weight: 500; color: var(--color-text-secondary); font-size: 0.85rem;">${stats.winRate.toFixed(1)}%</div>
+                        <div class="mobile-label" style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: ${color}; font-size: 1rem;">${stats.wins}W-${stats.losses}L</div>
                         <span class="desktop-label" style="color: var(--color-text-secondary); font-size: 0.85rem;">⏱️ Time wins: ${stats.timeWins}</span>
                         <span class="mobile-label" style="color: var(--color-text-secondary); font-size: 0.85rem;">⏱️W: ${stats.timeWins}</span>
                         <span class="desktop-label" style="color: var(--color-text-secondary); font-size: 0.85rem;">⏱️ Time losses: ${stats.timeLosses}</span>
@@ -369,26 +374,26 @@ const Components = {
                     <div style="margin-bottom: var(--spacing-sm); font-size: 0.9rem; color: var(--color-text-secondary);">
                         4 sessions with timed games • Average 4.5 games per session
                     </div>
-                    <div style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-md);" class="session-highlights-grid">
-                        <div style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid ${CONFIG.playerColors.Jorge}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">February 21, 2025</span><span class="mobile-month" style="display: none;">Feb 21, 2025</span></div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">🏆 7 timed games</div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge 4W-3L</strong><br/>Carlos 3W-4L<br/>⏱️ 2 timeout wins</div>
+                    <div class="session-highlights-grid">
+                        <div class="session-highlight-card" style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid ${CONFIG.playerColors.Jorge}; padding: var(--spacing-md); border-radius: var(--radius-md);">
+                            <div class="session-highlight-date" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">February 21, 2025</span><span class="mobile-month" style="display: none;">Feb 21, 2025</span></div>
+                            <div class="session-highlight-games" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;"><span class="desktop-label">🏆 7 timed games</span><span class="mobile-label" style="display: none;">🏆 7 games</span></div>
+                            <div class="session-highlight-details" style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge 4W-3L</strong><br/>Carlos 3W-4L<br/><span class="desktop-label">⏱️ 2 timeout wins</span><span class="mobile-label" style="display: none;">⏱️ 2 timeouts</span></div>
                         </div>
-                        <div style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid ${CONFIG.playerColors.Jorge}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">July 13, 2025</span><span class="mobile-month" style="display: none;">Jul 13, 2025</span></div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">5 timed games</div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge 3W-2L</strong><br/>Carlos 2W-3L<br/>⏱️ 1 timeout win</div>
+                        <div class="session-highlight-card" style="background: rgba(16, 185, 129, 0.08); border-left: 4px solid ${CONFIG.playerColors.Jorge}; padding: var(--spacing-md); border-radius: var(--radius-md);">
+                            <div class="session-highlight-date" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">July 13, 2025</span><span class="mobile-month" style="display: none;">Jul 13, 2025</span></div>
+                            <div class="session-highlight-games" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;"><span class="desktop-label">5 timed games</span><span class="mobile-label" style="display: none;">5 games</span></div>
+                            <div class="session-highlight-details" style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge 3W-2L</strong><br/>Carlos 2W-3L<br/><span class="desktop-label">⏱️ 1 timeout win</span><span class="mobile-label" style="display: none;">⏱️ 1 timeout</span></div>
                         </div>
-                        <div style="background: rgba(124, 58, 237, 0.08); border-left: 4px solid ${CONFIG.playerColors.Carlos}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">April 6, 2025</span><span class="mobile-month" style="display: none;">Apr 6, 2025</span></div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">5 timed games</div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos 3W-2L</strong><br/>Jorge 2W-3L</div>
+                        <div class="session-highlight-card" style="background: rgba(124, 58, 237, 0.08); border-left: 4px solid ${CONFIG.playerColors.Carlos}; padding: var(--spacing-md); border-radius: var(--radius-md);">
+                            <div class="session-highlight-date" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">April 6, 2025</span><span class="mobile-month" style="display: none;">Apr 6, 2025</span></div>
+                            <div class="session-highlight-games" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;"><span class="desktop-label">5 timed games</span><span class="mobile-label" style="display: none;">5 games</span></div>
+                            <div class="session-highlight-details" style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos 3W-2L</strong><br/>Jorge 2W-3L</div>
                         </div>
-                        <div style="background: rgba(124, 58, 237, 0.08); border-left: 4px solid ${CONFIG.playerColors.Carlos}; padding: var(--spacing-md); border-radius: var(--radius-md);">
-                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">July 23, 2025</span><span class="mobile-month" style="display: none;">Jul 23, 2025</span></div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;">1 timed game</div>
-                            <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos</strong> vs Carey<br/>Carlos win</div>
+                        <div class="session-highlight-card" style="background: rgba(124, 58, 237, 0.08); border-left: 4px solid ${CONFIG.playerColors.Carlos}; padding: var(--spacing-md); border-radius: var(--radius-md);">
+                            <div class="session-highlight-date" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.5rem;"><span class="desktop-month">July 23, 2025</span><span class="mobile-month" style="display: none;">Jul 23, 2025</span></div>
+                            <div class="session-highlight-games" style="font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: 0.25rem;"><span class="desktop-label">1 timed game</span><span class="mobile-label" style="display: none;">1 game</span></div>
+                            <div class="session-highlight-details" style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary);"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos</strong> def Carey</div>
                         </div>
                     </div>
                 </div>
@@ -470,25 +475,57 @@ const Components = {
             }
         };
 
-        const topGames = STATS.brutality.topGames.slice(0, 5).map((game, index) => {
-            const color = game.winner === 'Draw' ? '#9ca3af' : CONFIG.playerColors[game.winner];
+        const topGamesData = STATS.brutality.topGames.slice(0, 5).map((game, index) => {
+            // Detect if this is a brutal draw (Draw with "vs" in loser field)
+            let color, leftBorderStyle, textStyle;
+            if (game.winner === 'Draw' && game.loser.includes(' vs ')) {
+                // Extract player names from "Player1 vs Player2" format
+                const players = game.loser.split(' vs ').map(p => p.trim());
+                const color1 = CONFIG.playerColors[players[0]];
+                const color2 = CONFIG.playerColors[players[1]];
+                // Left border goes top to bottom (color1 to color2)
+                const borderGradient = `linear-gradient(to bottom, ${color1}, ${color2})`;
+                // Text gradient goes opposite direction (color2 to color1)
+                const textGradient = `linear-gradient(to bottom, ${color2}, ${color1})`;
+                leftBorderStyle = `border-left: 4px solid; border-image: ${borderGradient} 1;`;
+                textStyle = `background: ${textGradient}; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;`;
+                color = color1; // Fallback
+            } else {
+                color = game.winner === 'Draw' ? '#9ca3af' : CONFIG.playerColors[game.winner];
+                // Add left border for all brutal moments (wins)
+                leftBorderStyle = color !== '#9ca3af' ? `border-left: 4px solid ${color};` : '';
+                textStyle = `color: ${color};`;
+            }
+
             const brutalityIndicator = '🗡️'.repeat(game.rating);
             const headline = generateHeadline(game);
             const noteHtml = game.note ? `<div style="font-style: italic; margin-top: var(--spacing-sm); color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.5;">"${game.note}"</div>` : '';
 
-            return `
-                <div class="brutality-card" style="color: ${color};">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
-                        <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--color-text-primary);">${Utils.formatDate(game.date)}</div>
-                        <div style="font-size: 1.3rem; margin-left: var(--spacing-md);">${brutalityIndicator}</div>
+            return {
+                html: `
+                    <div class="brutality-card" style="${leftBorderStyle}">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.75rem;">
+                            <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--color-text-primary);">${Utils.formatDate(game.date)}</div>
+                            <div style="font-size: 1.3rem; margin-left: var(--spacing-md);">${brutalityIndicator}</div>
+                        </div>
+                        <div style="font-family: 'JetBrains Mono', monospace; ${textStyle} font-size: 0.95rem; font-weight: 600;">
+                            ${headline}
+                        </div>
+                        ${noteHtml}
                     </div>
-                    <div style="font-family: 'JetBrains Mono', monospace; color: ${color}; font-size: 0.95rem; font-weight: 600;">
-                        ${headline}
-                    </div>
-                    ${noteHtml}
-                </div>
-            `;
-        }).join('');
+                `,
+                index
+            };
+        });
+
+        const mostBrutal = topGamesData.length > 0 ? topGamesData[0].html : '';
+        const remainingGames = topGamesData.slice(1).map(g => g.html).join('');
+        const topGames = mostBrutal ? `
+            ${mostBrutal}
+            <div class="savage-moments-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); margin-top: var(--spacing-md);">
+                ${remainingGames}
+            </div>
+        ` : '';
 
         // Create rows with name, inflicted, and suffered
         const players = Object.entries(STATS.brutality.byPlayer)
@@ -501,8 +538,10 @@ const Components = {
             const color = CONFIG.playerColors[player];
             const playerInitial = player.charAt(0);
             const maxStat = Math.max(...Object.values(STATS.brutality.byPlayer).flatMap(p => [p.inflicted, p.suffered]));
-            const inflictedPercent = (stats.inflicted / maxStat) * 100;
-            const sufferedPercent = (stats.suffered / maxStat) * 100;
+            // Scale to use more of available space - use 80% of max as the baseline for 100%
+            const scaleFactor = maxStat * 0.8;
+            const inflictedPercent = Math.min((stats.inflicted / scaleFactor) * 100, 100);
+            const sufferedPercent = Math.min((stats.suffered / scaleFactor) * 100, 100);
             
             // Invert the player color for suffered bars
             const invertColor = (hex) => {
@@ -516,10 +555,11 @@ const Components = {
             return `
                 <div class="brutality-bars" style="margin: 0;">
                     <!-- Suffered Row (Odd) -->
-                    <div style="display: flex; align-items: center; gap: 0;">
+                    <div style="display: flex; align-items: center; gap: 0; position: relative;">
                         <div class="brutality-name-col" style="flex-shrink: 0; width: 80px; text-align: right; margin-right: var(--spacing-md);">
-                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${color}; margin: 0;"><span class="desktop-label">${player}</span><span class="mobile-label">${playerInitial}</span></h3>
+                            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${color}; margin: 0;"><span class="desktop-label">${player}</span></h3>
                         </div>
+                        <h3 class="mobile-label brutality-mobile-name" style="display: none; position: absolute; left: 4px; top: 50%; transform: translateY(-50%); z-index: 10; font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: ${color}; margin: 0;">${playerInitial}</h3>
                         <!-- Suffered bar (extends left) - invisible on odd rows -->
                         <div class="brutality-bar-container" style="flex: 1; display: flex; align-items: center; justify-content: flex-end; gap: 0; margin-right: 0;">
                             <div style="background: transparent; height: 28px; border-radius: var(--radius-sm) 0 0 var(--radius-sm); overflow: hidden; width: ${sufferedPercent}%; margin-right: 0;">
@@ -574,10 +614,10 @@ const Components = {
                 </div>
 
                 <!-- Stats Chart Card with Visual Bars -->
-                <div class="card mb-lg">
+                <div class="card mb-lg brutality-rankings-card">
                     <div class="subsection-title">Player Brutality Rankings</div>
-                    <div style="display: flex; align-items: flex-end; gap: 0; margin-bottom: 1.5rem;">
-                        <div style="flex-shrink: 0; width: 80px;"></div>
+                    <div class="brutality-header" style="display: flex; align-items: flex-end; gap: 0; margin-bottom: 1.5rem;">
+                        <div class="brutality-header-spacer" style="flex-shrink: 0; width: 80px; margin-right: var(--spacing-md);"></div>
                         <div style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 0;">
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--color-text-secondary);">Suffered</div>
                         </div>
@@ -594,8 +634,8 @@ const Components = {
                     <div class="subsection-title">The Brutality Paradox</div>
                     <div style="font-family: 'Inter', sans-serif; line-height: 1.8; color: var(--color-text-secondary);">
                         <div class="mb-md"><strong style="color: ${CONFIG.playerColors.Carey};">Carey's Story:</strong> Inflicted 45 points but suffered 60 - Carey's losses tend to be more brutal than victories</div>
-                        <div class="mb-md"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos's Dominance:</strong> Inflicted 44 points but only suffered 26 - More dignified defeats, savage wins</div>
-                        <div><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge's Balance:</strong> Inflicted 41, suffered 44 - Nearly balanced brutality in wins and losses</div>
+                        <div class="mb-md"><strong style="color: ${CONFIG.playerColors.Carlos};">Carlos's Dominance:</strong> Inflicted 44 points but only suffered 29 - More dignified defeats, savage wins</div>
+                        <div><strong style="color: ${CONFIG.playerColors.Jorge};">Jorge's Balance:</strong> Inflicted 44, suffered 44 - Perfectly balanced brutality in wins and losses</div>
                     </div>
                 </div>
 
@@ -660,10 +700,10 @@ const Components = {
                 .join(' ');
 
             return `
-                <div class="session-card" 
+                <div class="session-card"
                      style="color: ${topPlayerColor};"
                      onmouseenter="this.style.backgroundColor='${topPlayerColorHover}'; this.style.transform='translateX(4px)';"
-                     onmouseleave="this.style.backgroundColor='transparent'; this.style.transform='translateX(0)';">
+                     onmouseleave="this.style.backgroundColor=''; this.style.transform='translateX(0)';">
                     <div class="session-card-content" style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; flex-wrap: nowrap;">
                         <div class="session-card-left" style="flex: 0 0 auto; min-width: 0;">
                             <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.2rem; color: var(--color-text-primary); margin-bottom: var(--spacing-xs);">
@@ -818,13 +858,13 @@ const Components = {
         // Generate tabs
         const tabs = players.map((player, index) => {
             const color = CONFIG.playerColors[player];
-            const isActive = index === 0 ? 'tab-button--active' : '';
+            const isActive = index === 0 ? 'folder-tab--active' : '';
             return `
-                <button class="tab-button color-tab ${isActive}"
-                        data-player="${player}"
-                        style="border-color: ${color}; ${isActive ? `background: ${color}; color: var(--color-bg-primary);` : ''}">
-                    ${player}
-                </button>
+                <div class="folder-tab ${isActive}"
+                     data-player="${player}"
+                     style="--tab-color: ${color};">
+                    <div class="folder-tab-label">${player}</div>
+                </div>
             `;
         }).join('');
 
@@ -832,19 +872,9 @@ const Components = {
         const playerContent = players.map((player, index) => {
             const stats = PLAYER_COLOR_STATS[player].summary;
             const isActive = index === 0 ? 'active' : '';
-            const color = CONFIG.playerColors[player];
 
             return `
                 <div class="color-tab-content ${isActive}" data-player="${player}" style="display: ${isActive ? 'block' : 'none'};">
-                    <div style="text-align: center; margin-bottom: var(--spacing-lg);">
-                        <div class="subsection-title" style="color: ${color}; text-align: center; border: none; padding: 0;">
-                            ${player}'s Wins & Losses by Piece Color
-                        </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary); margin-top: var(--spacing-xs);">
-                            White pieces vs Black pieces performance throughout 2025
-                        </div>
-                    </div>
-
                     <div id="${player.toLowerCase()}-color-chart" style="width: 100%; height: 400px;"></div>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-md); margin-top: var(--spacing-md);">
@@ -856,7 +886,8 @@ const Components = {
                                 <span style="color: #10b981;">${stats.white.wins}W</span> - <span style="color: #ef4444;">${stats.white.losses}L</span> - <span style="color: #64748b;">${stats.white.draws}D</span>
                             </div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary); margin-top: var(--spacing-sm);">
-                                ${stats.white.games} total games (${stats.white.winRate}% win rate)
+                                <span class="desktop-label">${stats.white.games} total games (${stats.white.winRate}% win rate)</span>
+                                <span class="mobile-label" style="display: none;">${stats.white.games} games (${stats.white.winRate}%)</span>
                             </div>
                         </div>
 
@@ -868,7 +899,8 @@ const Components = {
                                 <span style="color: #10b981;">${stats.black.wins}W</span> - <span style="color: #ef4444;">${stats.black.losses}L</span> - <span style="color: #64748b;">${stats.black.draws}D</span>
                             </div>
                             <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--color-text-secondary); margin-top: var(--spacing-sm);">
-                                ${stats.black.games} total games (${stats.black.winRate}% win rate)
+                                <span class="desktop-label">${stats.black.games} total games (${stats.black.winRate}% win rate)</span>
+                                <span class="mobile-label" style="display: none;">${stats.black.games} games (${stats.black.winRate}%)</span>
                             </div>
                         </div>
                     </div>
@@ -880,14 +912,21 @@ const Components = {
             <div class="stats-grid--full section animate-in" data-animate-delay="9">
                 <h2 class="section-title">Color Performance</h2>
 
-                <div class="card">
-                    <!-- Tab Buttons -->
-                    <div style="display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
-                        ${tabs}
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <!-- Folder Tabs with Title -->
+                    <div class="folder-tabs-container">
+                        <div style="display: flex; align-items: flex-end; gap: 0.25rem;">
+                            ${tabs}
+                        </div>
+                        <div class="folder-tabs-title desktop-label">
+                            Wins & Losses by Piece Color
+                        </div>
                     </div>
 
                     <!-- Tab Content -->
-                    ${playerContent}
+                    <div class="folder-content" data-active-player="Carlos">
+                        ${playerContent}
+                    </div>
                 </div>
             </div>
         `;
@@ -922,6 +961,7 @@ class App {
             ${Components.yearTimeline()}
             ${Components.brutality()}
             ${Components.playerHighlights()}
+            ${Components.colorPerformance()}
             ${Components.sessions()}
         `;
 
@@ -1073,34 +1113,45 @@ class App {
                             axisTick: { show: false },
                             splitLine: { show: false }
                         },
-                        series: methods.map((method, index) => ({
-                            name: method,
-                            data: [values[index]],
-                            type: 'bar',
-                            stack: 'victory',
-                            itemStyle: {
-                                color: colors[index]
-                            },
-                            label: {
-                                show: true,
-                                position: 'inside',
-                                formatter: (params) => {
-                                    const total = values.reduce((a, b) => a + b, 0);
-                                    const percentage = ((params.value / total) * 100).toFixed(1);
-                                    return percentage > 8 ? `${method}\n${params.value}` : '';
-                                },
-                                color: '#fff',
-                                fontFamily: "'JetBrains Mono', monospace",
-                                fontWeight: 700,
-                                fontSize: 12,
-                                padding: [4, 8]
-                            },
-                            emphasis: {
+                        series: methods.map((method, index) => {
+                            // Determine if this is the first or last segment for border radius
+                            const isFirst = index === 0;
+                            const isLast = index === methods.length - 1;
+
+                            // Calculate percentage to determine label position
+                            const total = values.reduce((a, b) => a + b, 0);
+                            const percentage = ((values[index] / total) * 100);
+                            const isSmall = percentage < 8;
+
+                            return {
+                                name: method,
+                                data: [values[index]],
+                                type: 'bar',
+                                stack: 'victory',
+                                barWidth: '100%',
                                 itemStyle: {
-                                    opacity: 0.9
+                                    color: colors[index],
+                                    borderRadius: isFirst ? [8, 0, 0, 8] : isLast ? [0, 8, 8, 0] : 0
+                                },
+                                label: {
+                                    show: !isSmall,
+                                    position: 'inside',
+                                    formatter: (params) => {
+                                        return `${method}\n${params.value}`;
+                                    },
+                                    color: '#fff',
+                                    fontFamily: "'JetBrains Mono', monospace",
+                                    fontWeight: 700,
+                                    fontSize: 12,
+                                    padding: [4, 8]
+                                },
+                                emphasis: {
+                                    itemStyle: {
+                                        opacity: 0.9
+                                    }
                                 }
-                            }
-                        }))
+                            };
+                        })
                     };
                 } else {
                     // Pie/Doughnut chart configuration
@@ -1499,8 +1550,21 @@ class App {
             const playerData = PLAYER_COLOR_STATS[player];
             const whiteWins = monthsFull.map(m => playerData[m].white.wins);
             const whiteLosses = monthsFull.map(m => playerData[m].white.losses);
+            const whiteDraws = monthsFull.map(m => playerData[m].white.draws);
             const blackWins = monthsFull.map(m => playerData[m].black.wins);
             const blackLosses = monthsFull.map(m => playerData[m].black.losses);
+            const blackDraws = monthsFull.map(m => playerData[m].black.draws);
+
+            // Create scatter data for draws (only show dots where draws > 0)
+            const whiteDrawScatter = monthsFull.map((m, idx) => {
+                const draws = playerData[m].white.draws;
+                return draws > 0 ? [idx, draws] : null;
+            }).filter(v => v !== null);
+
+            const blackDrawScatter = monthsFull.map((m, idx) => {
+                const draws = playerData[m].black.draws;
+                return draws > 0 ? [idx, draws] : null;
+            }).filter(v => v !== null);
 
             const colorOption = {
                 tooltip: {
@@ -1511,16 +1575,18 @@ class App {
                     formatter: function(params) {
                         let result = `<div style="font-weight: 700; margin-bottom: 8px;">${params[0].axisValue}</div>`;
                         params.forEach(param => {
+                            // For scatter plots, param.value is [index, value], we want just the value
+                            const displayValue = Array.isArray(param.value) ? param.value[1] : param.value;
                             result += `<div style="display: flex; align-items: center; gap: 8px; margin: 4px 0;">
                                 <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: ${param.color};"></span>
-                                <span>${param.seriesName}: <strong>${param.value}</strong></span>
+                                <span>${param.seriesName}: <strong>${displayValue}</strong></span>
                             </div>`;
                         });
                         return result;
                     }
                 },
                 legend: {
-                    data: ['White Wins', 'White Losses', 'Black Wins', 'Black Losses'],
+                    data: ['White Wins', 'White Losses', 'White Draws', 'Black Wins', 'Black Losses', 'Black Draws'],
                     top: 10,
                     textStyle: {
                         color: 'rgba(248, 249, 250, 0.8)',
@@ -1589,6 +1655,28 @@ class App {
                         emphasis: { focus: 'series', lineStyle: { width: 3 } }
                     },
                     {
+                        name: 'White Draws',
+                        type: 'scatter',
+                        data: whiteDrawScatter,
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        itemStyle: {
+                            color: '#64748b',
+                            borderColor: CONFIG.chartColors.white,
+                            borderWidth: 2
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: '#64748b',
+                                borderColor: CONFIG.chartColors.white,
+                                borderWidth: 3,
+                                shadowBlur: 8,
+                                shadowColor: '#64748b'
+                            }
+                        },
+                        z: 10
+                    },
+                    {
                         name: 'Black Wins',
                         type: 'line',
                         data: blackWins,
@@ -1609,6 +1697,28 @@ class App {
                         lineStyle: { color: CONFIG.chartColors.black, width: 2, type: 'dashed' },
                         itemStyle: { color: CONFIG.chartColors.black, borderWidth: 1, borderColor: '#ef4444', opacity: 0.6 },
                         emphasis: { focus: 'series', lineStyle: { width: 3 } }
+                    },
+                    {
+                        name: 'Black Draws',
+                        type: 'scatter',
+                        data: blackDrawScatter,
+                        symbol: 'circle',
+                        symbolSize: 8,
+                        itemStyle: {
+                            color: '#64748b',
+                            borderColor: CONFIG.chartColors.black,
+                            borderWidth: 2
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: '#64748b',
+                                borderColor: CONFIG.chartColors.black,
+                                borderWidth: 3,
+                                shadowBlur: 8,
+                                shadowColor: '#64748b'
+                            }
+                        },
+                        z: 10
                     }
                 ]
             };
@@ -1618,23 +1728,23 @@ class App {
         });
 
         // Add tab switching functionality
-        const tabButtons = document.querySelectorAll('.color-tab');
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function() {
+        const folderTabs = document.querySelectorAll('.folder-tab');
+        folderTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
                 const targetPlayer = this.dataset.player;
-                const playerColor = CONFIG.playerColors[targetPlayer];
 
-                // Update button states
-                tabButtons.forEach(btn => {
-                    const btnColor = CONFIG.playerColors[btn.dataset.player];
-                    if (btn === this) {
-                        btn.classList.add('tab-button--active');
-                        btn.style.background = playerColor;
-                        btn.style.color = 'var(--color-bg-primary)';
+                // Update folder-content border color
+                const folderContent = document.querySelector('.folder-content');
+                if (folderContent) {
+                    folderContent.setAttribute('data-active-player', targetPlayer);
+                }
+
+                // Update tab states
+                folderTabs.forEach(t => {
+                    if (t === this) {
+                        t.classList.add('folder-tab--active');
                     } else {
-                        btn.classList.remove('tab-button--active');
-                        btn.style.background = '';
-                        btn.style.color = '';
+                        t.classList.remove('folder-tab--active');
                     }
                 });
 
