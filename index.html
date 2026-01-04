@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="2025 Chess Championship Statistics - Comprehensive analytics dashboard">
+    <title>Chess 2025 | Championship Dashboard</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">CHESS 2025</h1>
+            <p class="header__subtitle">Three guys who play a lot of chess together<br/>wanted real data on who was the best</p>
+        </header>
+        
+        <main id="app" class="app">
+            <div class="loading">Loading statistics...</div>
+        </main>
+        
+        <footer class="footer">
+            <p>2025 Chess Battle Data • Three Warriors • One Board • Infinite Battles</p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

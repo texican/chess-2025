@@ -1,0 +1,170 @@
+{
+  "totalGames": 296,
+  "players": [
+    "Carey","Carlos","Jorge"
+  ],
+  "playerStats": {
+    "Carey": {
+      "totalGames": 122,
+      "wins": 60,
+      "losses": 60,
+      "winRate": 49
+    },
+    "Carlos": {
+      "totalGames": 255,
+      "wins": 136,
+      "losses": 111,
+      "winRate": 53
+    },
+    "Jorge": {
+      "totalGames": 215,
+      "wins": 91,
+      "losses": 116,
+      "winRate": 42
+    }
+  },
+  "headToHead": {
+    "Carey_vs_Carlos": {
+      "total": 81,
+      "player1": "Carey",
+      "player2": "Carlos",
+      "player1Wins": 36,
+      "player2Wins": 44,
+      "draws": 1
+    },
+    "Carlos_vs_Jorge": {
+      "total": 174,
+      "player1": "Carlos",
+      "player2": "Jorge",
+      "player1Wins": 92,
+      "player2Wins": 75,
+      "draws": 7
+    },
+    "Carey_vs_Jorge": {
+      "total": 41,
+      "player1": "Carey",
+      "player2": "Jorge",
+      "player1Wins": 24,
+      "player2Wins": 16,
+      "draws": 1
+    }
+  },
+  "colorStats": {
+    "whiteWins": 141,
+    "blackWins": 146,
+    "draws": 9
+  },
+  "victoryMethods": {
+    "Draw": 9,
+    "Time": 3,
+    "Resigned": 46,
+    "Checkmate": 238
+  },
+  "brutality": {
+    "totalBrutalGames": 47,
+    "byPlayer": {
+      "Carey": {
+        "inflicted": 45,
+        "suffered": 60
+      },
+      "Carlos": {
+        "inflicted": 44,
+        "suffered": 26
+      },
+      "Jorge": {
+        "inflicted": 41,
+        "suffered": 44
+      }
+    },
+    "topGames": [
+      {
+        "date": "5/12/2025",
+        "winner": "Jorge",
+        "loser": "Carey",
+        "rating": 5,
+        "note": "Grampa was gonna force the draw via the 50 move rule; Carey tipped his king in frustration with the peanut gallery (Carlos).Carey fladgulated himself to loss."
+      },
+      {
+        "date": "3/23/2025",
+        "winner": "Carlos",
+        "loser": "Carey",
+        "rating": 4,
+        "note": "Scholar's Mate"
+      },
+      {
+        "date": "6/17/2025",
+        "winner": "Carey",
+        "loser": "Jorge",
+        "rating": 4,
+        "note": "Annoyance"
+      },
+      {
+        "date": "7/23/2025",
+        "winner": "Draw",
+        "loser": "Carey vs Carlos",
+        "rating": 4,
+        "note": "three white queens. Seemingly infinite check loops. Maximum absurdity."
+      },
+      {
+        "date": "9/6/2025",
+        "winner": "Carlos",
+        "loser": "Carey",
+        "rating": 4,
+        "note": ""
+      }
+    ]
+  },
+  "timeStats": {
+    "peakHour": 21,
+    "peakHourGames": 62,
+    "byPeriod": {
+      "Night": 165,
+      "Morning": 1,
+      "Afternoon": 71,
+      "Evening": 59
+    }
+  },
+  "sessions": {
+    "total": 48,
+    "avgGames": 6,
+    "epicSessions": [
+      {"date": "9/27/2025", "games": 25, "players": "Carey, Carlos, Jorge", "hours": 5.3, "wins": {"Carlos": 11, "Jorge": 9, "Carey": 4}},
+      {"date": "12/30/2025", "games": 22, "players": "Carey, Carlos, Jorge", "hours": 4.37, "wins": {"Carlos": 12, "Jorge": 9, "Carey": 1}},
+      {"date": "12/24/2025", "games": 19, "players": "Carey, Carlos, Jorge", "hours": 4.39, "wins": {"Carlos": 8, "Jorge": 8, "Carey": 3}},
+      {"date": "5/22/2025", "games": 13, "players": "Carey, Carlos, Jorge", "hours": 2.7, "wins": {"Jorge": 7, "Carlos": 5, "Carey": 0}},
+      {"date": "11/5/2025", "games": 12, "players": "Carlos, Jorge", "hours": 3.0, "wins": {"Carlos": 7, "Jorge": 4, "Carey": 0}},
+      {"date": "4/6/2025", "games": 12, "players": "Carey, Carlos, Jorge", "hours": 3.0, "wins": {"Carlos": 9, "Carey": 1, "Jorge": 1}},
+      {"date": "7/13/2025", "games": 11, "players": "Carlos, Jorge", "hours": 2.75, "wins": {"Jorge": 8, "Carlos": 3, "Carey": 0}},
+      {"date": "6/17/2025", "games": 11, "players": "Carey, Carlos, Jorge", "hours": 2.75, "wins": {"Jorge": 5, "Carey": 4, "Carlos": 2}},
+      {"date": "12/24/2025", "games": 11, "players": "Carey, Carlos, Jorge", "hours": 2.75, "wins": {"Carlos": 4, "Jorge": 4, "Carey": 3}},
+      {"date": "11/9/2025", "games": 11, "players": "Carey, Carlos, Jorge", "hours": 2.75, "wins": {"Carlos": 8, "Jorge": 2, "Carey": 1}},
+      {"date": "9/6/2025", "games": 11, "players": "Carey, Carlos, Jorge", "hours": 2.75, "wins": {"Carlos": 4, "Jorge": 4, "Carey": 3}},
+      {"date": "6/13/2025", "games": 10, "players": "Carlos, Jorge", "hours": 2.5, "wins": {"Jorge": 6, "Carlos": 4, "Carey": 0}}
+    ]
+  },
+  "streaks": {
+    "Carey": 8,
+    "Carlos": 11,
+    "Jorge": 8
+  },
+  "monthly": {
+    "January": {"games": 9, "wins": {"Carlos": 7, "Carey": 1, "Jorge": 1}, "losses": {"Carlos": 2, "Carey": 4, "Jorge": 3}},
+    "February": {"games": 20, "wins": {"Carlos": 10, "Carey": 6, "Jorge": 4}, "losses": {"Carlos": 7, "Carey": 3, "Jorge": 10}},
+    "March": {"games": 18, "wins": {"Carlos": 7, "Carey": 8, "Jorge": 2}, "losses": {"Carlos": 5, "Carey": 9, "Jorge": 3}},
+    "April": {"games": 12, "wins": {"Carlos": 9, "Carey": 1, "Jorge": 1}, "losses": {"Carlos": 1, "Carey": 2, "Jorge": 8}},
+    "May": {"games": 34, "wins": {"Carlos": 8, "Carey": 8, "Jorge": 16}, "losses": {"Carlos": 15, "Carey": 6, "Jorge": 11}},
+    "June": {"games": 26, "wins": {"Carlos": 8, "Carey": 7, "Jorge": 11}, "losses": {"Carlos": 13, "Carey": 6, "Jorge": 7}},
+    "July": {"games": 14, "wins": {"Carlos": 4, "Carey": 1, "Jorge": 8}, "losses": {"Carlos": 9, "Carey": 1, "Jorge": 3}},
+    "August": {"games": 22, "wins": {"Carlos": 10, "Carey": 8, "Jorge": 3}, "losses": {"Carlos": 8, "Carey": 4, "Jorge": 9}},
+    "September": {"games": 43, "wins": {"Carlos": 20, "Carey": 7, "Jorge": 14}, "losses": {"Carlos": 13, "Carey": 7, "Jorge": 21}},
+    "October": {"games": 19, "wins": {"Carlos": 7, "Carey": 4, "Jorge": 8}, "losses": {"Carlos": 8, "Carey": 6, "Jorge": 5}},
+    "November": {"games": 33, "wins": {"Carlos": 24, "Carey": 2, "Jorge": 6}, "losses": {"Carlos": 8, "Carey": 6, "Jorge": 18}},
+    "December": {"games": 46, "wins": {"Carlos": 22, "Carey": 7, "Jorge": 17}, "losses": {"Carlos": 22, "Carey": 6, "Jorge": 18}}
+  },
+  "quarterly": {
+    "Q1": {"games": 47, "wins": {"Carlos": 24, "Carey": 15, "Jorge": 7}},
+    "Q2": {"games": 72, "wins": {"Carlos": 25, "Carey": 16, "Jorge": 28}},
+    "Q3": {"games": 79, "wins": {"Carlos": 34, "Carey": 16, "Jorge": 25}},
+    "Q4": {"games": 98, "wins": {"Carlos": 53, "Carey": 13, "Jorge": 31}}
+  }
+}
