@@ -141,7 +141,7 @@ const Components = {
 
                 <!-- Hero Stats -->
                 <div class="mb-lg" style="aspect-ratio: 1 / .6; width: 90%; margin-left: auto; margin-right: auto; background: linear-gradient(135deg, rgba(124, 58, 237, 0.12) 0%, rgba(0, 212, 255, 0.12) 50%, rgba(16, 185, 129, 0.12) 100%); border-radius: var(--radius-lg); padding: var(--spacing-lg); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box;">
-                    <div class="stat-number" style="font-size: clamp(12rem, 45vw, 60rem); font-weight: 900; background: linear-gradient(135deg, #7c3aed, #00d4ff, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 0.9; margin-bottom: var(--spacing-sm); max-width: 100%;" data-count="${STATS.totalGames}">0</div>
+                    <div id="total-games-number" class="stat-number" style="font-size: 4rem; font-weight: 900; background: linear-gradient(135deg, #7c3aed, #00d4ff, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 0.9; margin-bottom: var(--spacing-sm); max-width: 100%; word-break: break-word;" data-count="${STATS.totalGames}">0</div>
                     <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; color: var(--color-text-primary); max-width: 100%; text-align: center;">Total Games</div>
                 </div>
 

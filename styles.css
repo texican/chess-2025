@@ -335,4 +335,24 @@ body {
     .container { padding: var(--spacing-sm); }
     .stat-number { font-size: 2.5rem; }
     .stat-number--large { font-size: 3.5rem; }
+    .header__title { font-size: 2.5rem; }
+    .header__subtitle { font-size: 0.9rem; }
+    .stats-grid { gap: var(--spacing-xs); }
+    .section { padding: var(--spacing-sm); }
+    .card { padding: 0.75rem; }
+    .tab-button { padding: 0.5rem 1rem; font-size: 0.9rem; }
+    #total-games-number { font-size: 4rem !important; }
+}
+
+@media (min-width: 769px) {
+    #total-games-number { font-size: 18rem !important; }
+}
+
+@media (max-width: 480px) {
+    .header__title { font-size: 2rem; }
+    .header__subtitle { font-size: 0.8rem; }
+    .section-title { font-size: 1rem; }
+    .subsection-title { font-size: 1rem; }
+    .stat-number--medium { font-size: 2rem; }
+    .card { padding: 0.5rem; }
 }
