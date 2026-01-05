@@ -43,9 +43,9 @@
     --card-padding-lg: 1.25rem;
 
     /* Typography Sizes */
-    --title-section: 1.2rem;
-    --title-subsection: 1.1rem;
-    --title-card: 0.9rem;
+    --title-section: clamp(1rem, 2vw, 1.2rem);
+    --title-subsection: clamp(1rem, 2vw, 1.1rem);
+    --title-card: clamp(0.85rem, 1.5vw, 0.9rem);
 }
 
 /* ===== RESET ===== */
@@ -80,7 +80,7 @@ body {
 
 .header__title {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(3.5rem, 10vw, 6.5rem);
+    font-size: clamp(2rem, 9vw + 1rem, 30rem);
     font-weight: 700;
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-sm);
@@ -90,9 +90,12 @@ body {
 .header__subtitle {
     font-family: 'JetBrains Mono', monospace;
     color: var(--color-text-secondary);
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    letter-spacing: clamp(0, 0.5vw, 0.1em);
     text-transform: uppercase;
+    max-width: 85%;
+    margin: 0 auto;
+    line-height: 1.4;
 }
 
 
@@ -109,8 +112,8 @@ body {
 /* ===== GRID ===== */
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 265px), 1fr));
-    gap: var(--spacing-sm);
+    grid-template-columns: repeat(auto-fill, minmax(min(31%, 400px), 1fr));
+    gap: max(0.05em, 0.5%);
     margin-bottom: var(--spacing-lg);
 }
 
@@ -120,14 +123,14 @@ body {
 .section {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-md);
+    padding: max(1em, 2%);
 }
 
 /* ===== CARD ===== */
 .card {
     background: var(--bg-card-default);
     border-radius: var(--radius-md);
-    padding: var(--card-padding);
+    padding: max(0.1em, .5%);
     border: 1px solid var(--border-card);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -197,15 +200,15 @@ body {
 /* ===== STAT NUMBER ===== */
 .stat-number {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 700;
     color: var(--color-text-primary);
     line-height: 1;
 }
 
-.stat-number--large { font-size: 5rem; }
-.stat-number--medium { font-size: 2.5rem; }
-.stat-number--small { font-size: 1.8rem; }
+.stat-number--large { font-size: clamp(3.5rem, 7vw, 5rem); }
+.stat-number--medium { font-size: clamp(2rem, 4vw, 2.5rem); }
+.stat-number--small { font-size: clamp(1.5rem, 3vw, 1.8rem); }
 
 .stat-label {
     font-family: 'JetBrains Mono', monospace;
@@ -222,6 +225,140 @@ body {
     padding: var(--spacing-xl);
     font-family: 'JetBrains Mono', monospace;
     color: var(--color-text-secondary);
+}
+
+/* ===== OVERVIEW SECTION ===== */
+.section.stats-grid--full {
+    padding: clamp(0.5rem, 1.5vw, 1.5rem);
+}
+
+.hero-stats-container {
+    aspect-ratio: 1 / 0.7;
+    width: clamp(280px, 100%, 600px);
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.12) 0%, rgba(0, 212, 255, 0.12) 50%, rgba(16, 185, 129, 0.12) 100%);
+    border-radius: var(--radius-lg);
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    box-sizing: border-box;
+    container-type: inline-size;
+}
+
+.total-games-number {
+    font-size: clamp(4rem, 50cqw, 70cqw);
+    font-weight: 900;
+    background: linear-gradient(135deg, #7c3aed, #00d4ff, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0;
+    max-width: 100%;
+    word-break: keep-all;
+    white-space: nowrap;
+    line-height: 0.85;
+}
+
+.total-games-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 15cqw, 6rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    max-width: 95%;
+    text-align: center;
+    margin-top: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.overview-stat-card {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.1rem;
+    overflow: hidden;
+    box-sizing: border-box;
+    container-type: inline-size;
+}
+
+.overview-stat-card--carlos {
+    background: rgba(124, 58, 237, 0.04);
+    border: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.overview-stat-card--carey {
+    background: rgba(0, 212, 255, 0.04);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.overview-stat-card--jorge {
+    background: rgba(16, 185, 129, 0.04);
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.overview-stat-card--brutal {
+    background: rgba(220, 38, 38, 0.05);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.overview-stat-card--streak {
+    background: rgba(124, 58, 237, 0.05);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.overview-stat-label {
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.overview-stat-label--carlos {
+    color: rgba(124, 58, 237, 0.6);
+}
+
+.overview-stat-label--carey {
+    color: rgba(0, 212, 255, 0.6);
+}
+
+.overview-stat-label--jorge {
+    color: rgba(16, 185, 129, 0.6);
+}
+
+.overview-stat-label--brutal {
+    color: rgba(239, 68, 68, 0.6);
+}
+
+.overview-stat-label--streak {
+    color: rgba(124, 58, 237, 0.6);
+    font-size: clamp(0.55rem, 1.8vw, 0.75rem);
+}
+
+.overview-stat-value {
+    font-size: clamp(5rem, 70cqw, 80cqw);
+    font-weight: 800;
+    line-height: 0.85;
+    max-width: 100%;
+}
+
+.overview-stat-subtitle {
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1;
+}
+
+.overview-stat-subtitle--small {
+    font-size: clamp(0.95rem, 2.8vw, 1.5rem);
 }
 
 /* ===== BRUTALITY BARS ===== */
@@ -516,22 +653,12 @@ body {
     body { overflow-y: scroll; overflow-x: hidden; }
     .container { max-width: none; }
     .header { padding: 1.5rem 0.5rem 1rem 0.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; }
-    .stat-number { font-size: 2.5rem; }
-    .stat-number--large { font-size: 3.5rem; }
-    .header__title { font-size: 2.5rem; margin-left: 0; margin-right: 0; margin: 0; text-align: center; }
-    .header__subtitle { font-size: 0.85rem; max-width: min(85%, 25ch); margin: 0 auto; word-break: break-word; letter-spacing: 0; text-align: center; }
-    .stats-grid { gap: var(--spacing-xs); }
-    .section { padding: 0.5rem; }
-    .card { padding: 0.75rem; }
     .session-card { padding: 0.25rem 0.5rem !important; }
     .tab-button { padding: 0.5rem 1rem; font-size: 0.9rem; }
-    #total-games-number { font-size: 4rem !important; }
     .desktop-label { display: none; }
     .mobile-label { display: inline !important; }
     .desktop-month { display: none; }
     .mobile-month { display: inline !important; }
-    .desktop-subtitle { display: none; }
-    .mobile-subtitle { display: inline !important; }
     .timed-games-stats { grid-template-columns: repeat(2, 1fr) !important; }
     .quarterly-stats { grid-template-columns: repeat(2, 1fr) !important; }
     .player-highlights-grid { grid-template-columns: 1fr !important; }
@@ -588,15 +715,5 @@ body {
 }
 
 @media (min-width: 769px) {
-    #total-games-number { font-size: 18rem !important; }
     .epic-sessions-grid { grid-template-columns: repeat(2, 1fr) !important; gap: var(--spacing-md) !important; }
-}
-
-@media (max-width: 480px) {
-    .header__title { font-size: 2rem; }
-    .header__subtitle { font-size: 0.8rem; }
-    .section-title { font-size: 1rem; }
-    .subsection-title { font-size: 1rem; }
-    .stat-number--medium { font-size: 2rem; }
-    .card { padding: 0.5rem; }
 }

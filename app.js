@@ -140,56 +140,56 @@ const Components = {
                 <h2 class="section-title">Overview</h2>
 
                 <!-- Hero Stats -->
-                <div class="mb-lg" style="aspect-ratio: 1 / .6; width: 90%; margin-left: auto; margin-right: auto; background: linear-gradient(135deg, rgba(124, 58, 237, 0.12) 0%, rgba(0, 212, 255, 0.12) 50%, rgba(16, 185, 129, 0.12) 100%); border-radius: var(--radius-lg); padding: var(--spacing-lg); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box;">
-                    <div id="total-games-number" class="stat-number" style="font-size: 4rem; font-weight: 900; background: linear-gradient(135deg, #7c3aed, #00d4ff, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 0.9; margin-bottom: var(--spacing-sm); max-width: 100%; word-break: break-word;" data-count="${STATS.totalGames}">0</div>
-                    <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; color: var(--color-text-primary); max-width: 100%; text-align: center;">Total Games</div>
+                <div class="mb-lg hero-stats-container">
+                    <div id="total-games-number" class="stat-number total-games-number" data-count="${STATS.totalGames}">0</div>
+                    <div class="total-games-label">Total Games</div>
                 </div>
 
                 <!-- Stats Grid -->
                 <div class="overview-stats-grid">
                     <!-- Sessions Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(124, 58, 237, 0.04); border: 1px solid rgba(124, 58, 237, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(124, 58, 237, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Sessions</div>
-                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Carlos}; line-height: 0.85; max-width: 100%;" data-count="${STATS.sessions.total}">0</div>
-                        <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Sessions</div>
+                    <div class="card overview-stat-card overview-stat-card--carlos">
+                        <div class="overview-stat-label overview-stat-label--carlos">Sessions</div>
+                        <div class="stat-number overview-stat-value" style="color: ${CONFIG.playerColors.Carlos};" data-count="${STATS.sessions.total}">0</div>
+                        <div class="overview-stat-subtitle">Sessions</div>
                     </div>
 
                     <!-- Games per Session Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0, 212, 255, 0.04); border: 1px solid rgba(0, 212, 255, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(0, 212, 255, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Games Per</div>
-                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Carey}; line-height: 0.85; max-width: 100%;" data-count="${avgSessionGames}">0</div>
-                        <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Games/Session</div>
+                    <div class="card overview-stat-card overview-stat-card--carey">
+                        <div class="overview-stat-label overview-stat-label--carey">Games Per</div>
+                        <div class="stat-number overview-stat-value" style="color: ${CONFIG.playerColors.Carey};" data-count="${avgSessionGames}">0</div>
+                        <div class="overview-stat-subtitle overview-stat-subtitle">Games/Session</div>
                     </div>
 
                     <!-- Avg Session Duration Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Avg Duration</div>
-                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${avgSessionMinutes}">0</div>
-                        <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Mins/Session</div>
+                    <div class="card overview-stat-card overview-stat-card--jorge">
+                        <div class="overview-stat-label overview-stat-label--jorge">Avg Duration</div>
+                        <div class="stat-number overview-stat-value" style="color: ${CONFIG.playerColors.Jorge};" data-count="${avgSessionMinutes}">0</div>
+                        <div class="overview-stat-subtitle">Mins/Session</div>
                     </div>
-                   
+
                     <!-- Timed Games Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(16, 185, 129, 0.04); border: 1px solid rgba(16, 185, 129, 0.15); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                    <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(16, 185, 129, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">5:00 Mins</div>
-                    <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: ${CONFIG.playerColors.Jorge}; line-height: 0.85; max-width: 100%;" data-count="${timedGames}">0</div>
-                    <div style="font-size: clamp(1rem, 3vw, 1.6rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Timed Games</div>
+                    <div class="card overview-stat-card overview-stat-card--jorge">
+                        <div class="overview-stat-label overview-stat-label--jorge">5:00 Mins</div>
+                        <div class="stat-number overview-stat-value" style="color: ${CONFIG.playerColors.Jorge};" data-count="${timedGames}">0</div>
+                        <div class="overview-stat-subtitle">Timed Games</div>
                     </div>
- 
+
                     <!-- Brutal Games Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(220, 38, 38, 0.05); border: 1px solid rgba(220, 38, 38, 0.2); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.6rem, 2vw, 0.8rem); font-weight: 600; color: rgba(239, 68, 68, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">Brutality</div>
-                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: #ef4444; line-height: 0.85; max-width: 100%;" data-count="${STATS.brutality.totalBrutalGames}">0</div>
-                        <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Savage Games</div>
+                    <div class="card overview-stat-card overview-stat-card--brutal">
+                        <div class="overview-stat-label overview-stat-label--brutal">Brutality</div>
+                        <div class="stat-number overview-stat-value" style="color: #ef4444;" data-count="${STATS.brutality.totalBrutalGames}">0</div>
+                        <div class="overview-stat-subtitle overview-stat-subtitle">Savage Games</div>
                     </div>
 
                     <!-- Longest Streak Card -->
-                    <div class="card" style="aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(124, 58, 237, 0.05); border: 1px solid rgba(124, 58, 237, 0.2); padding: 0.25rem; gap: 0.1rem; overflow: hidden; box-sizing: border-box;">
-                        <div style="font-size: clamp(0.55rem, 1.8vw, 0.75rem); font-weight: 600; color: rgba(124, 58, 237, 0.6); text-transform: uppercase; letter-spacing: 1.5px; max-width: 100%; text-align: center;">
+                    <div class="card overview-stat-card overview-stat-card--streak">
+                        <div class="overview-stat-label overview-stat-label--streak">
                             <span class="desktop-label">Consecutive Wins</span>
-                            <span class="mobile-label" style="display: none;">Consec Wins</span>
+                            <span class="mobile-label">Consec Wins</span>
                         </div>
-                        <div class="stat-number" style="font-size: clamp(5rem, 16vw, 10rem); font-weight: 800; color: #7c3aed; line-height: 0.85; max-width: 100%;" data-count="${Math.max(...Object.values(STATS.streaks))}">0</div>
-                        <div style="font-size: clamp(0.95rem, 2.8vw, 1.5rem); color: var(--color-text-secondary); font-weight: 500; max-width: 100%; text-align: center; line-height: 1;">Best Streak</div>
+                        <div class="stat-number overview-stat-value" style="color: #7c3aed;" data-count="${Math.max(...Object.values(STATS.streaks))}">0</div>
+                        <div class="overview-stat-subtitle overview-stat-subtitle">Best Streak</div>
                     </div>
                 </div>
             </div>
